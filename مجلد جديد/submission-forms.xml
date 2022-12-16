@@ -2381,11 +2381,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
  <!-- <row>
     <relation-field>
-        <relationship-type>isSubOrgUnitOfPerson</relationship-type>
-        <search-configuration>suborgunit</search-configuration>
+        <relationship-type>isAdministrationOfPerson</relationship-type>
+        <search-configuration>administration</search-configuration>
          <repeatable>true</repeatable>
-        <label>Sub-Organization</label>
-        <hint>Import an sub-organization or enter an sub-organization name</hint>
+        <label>Administration</label>
+        <hint>Import an Administration or enter an Administration name</hint>
         <linked-metadata-field>
             <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -2914,11 +2914,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfProject</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfProject</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -3102,7 +3102,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isOrgUnitOfSubOrgUnit</relationship-type>
+                    <relationship-type>isOrgUnitOfAdministration</relationship-type>
                     <search-configuration>orgunit</search-configuration>
                      <repeatable>true</repeatable>
                     <label>Parent organization</label>
@@ -3445,7 +3445,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
          <row>
                 <relation-field>
-                     <relationship-type>isOrgUnitOfSubOrgUnit</relationship-type>
+                     <relationship-type>isOrgUnitOfAdministration</relationship-type>
                     <search-configuration>orgunit</search-configuration>
                      <repeatable>true</repeatable>
                     <label>Parent organization(the organization to which this organization is affiliated)</label>
@@ -4111,11 +4111,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfEvent</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfEvent</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -4376,11 +4376,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfActivity</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfActivity</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -5108,11 +5108,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfSeries</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfSeries</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -5630,11 +5630,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfPlace</relationship-type>
-                    <search-configuration>suborgunit</search-configuration>
+                    <relationship-type>isAdministrationOfPlace</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
@@ -5813,11 +5813,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             <row>
                 <relation-field>
-                    <relationship-type>isSubOrgUnitOfSite</relationship-type>
-                    <search-configuration>suborgunit</search-configuration>
+                    <relationship-type>isAdministrationOfSite</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Sub-Organization</label>
-                    <hint>Enter the sub-organization.</hint>
+                    <label>Administration</label>
+                    <hint>Enter the Administration.</hint>
                     <linked-metadata-field>
                        <dc-schema>organization</dc-schema>
                          <dc-element>child</dc-element>
