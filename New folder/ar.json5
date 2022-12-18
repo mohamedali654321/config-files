@@ -5051,8 +5051,8 @@
 'relationships.isManagingEditortOf.Person':'مدير التحرير',
 'relationships.isEditorialBoardOf.Person':'أعضاء هيئة التحرير',
 
-'suborgunit.page.titleprefix':'إدارة:',
-'suborgunit.listelement.badge':'إدارة',
+'administration.page.titleprefix':'إدارة:',
+'administration.listelement.badge':'إدارة',
 
 'item.page.person':'الأشخاص',
 
@@ -5061,7 +5061,7 @@
 'relationships.isEventOf':'الاحداث',
 'relationships.isPlaceOf':'الأماكن',
 'relationships.isEraOf':'الحقب الزمنية',
-'relationships.isSubOrgUnitOf':'الإدارات',
+'relationships.isAdministration Of':'الإدارات',
 
 'relationships.isOrgUnitOfSubOrg':"مؤسسات",
 
@@ -5107,7 +5107,7 @@
 'event.page.duration':'الفترة الزمنية',
 'event.page.description':'الجدول',
 
- "search.filters.entityType.SubOrgUnit":"إدارة",
+ "search.filters.entityType.Administration ":"إدارة",
 "search.filters.entityType.Place":"مكان",
 "search.filters.entityType.Event":"حدث",
 "search.filters.entityType.Era":"حقبة زمنية",
@@ -5121,8 +5121,8 @@
 
 'submission.sections.describe.relationship-lookup.title.isEventOfPlace':'الأحداث',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEventOfPlace':'الأحداث المحلية ({{ count }})',
-'submission.sections.describe.relationship-lookup.title.isOrgUnitOfSubOrgUnit':'المؤسسات المحلية',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfSubOrgUnit':'المؤسسات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isOrgUnitOfAdministration ':'المؤسسات المحلية',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfAdministration ':'المؤسسات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPlaceOfEvent':'الأماكن',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPlaceOfEvent':'الأماكن المحلية ({{ count }})',
@@ -5144,9 +5144,9 @@
 'event.search.results.head':"نتائج بحث الأحداث",
 
 'journalissue.search.results.head':"نتائج بحث أعداد الدوريات",
-'submission.sections.describe.relationship-lookup.title.SubOrgUnit':'الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.SubOrgUnit':' الإدارات المحلية ({{ count }})',
-'suborgunit.search.results.head':"نتائج بحث  الإدارات",
+'submission.sections.describe.relationship-lookup.title.Administration ':'الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.Administration ':' الإدارات المحلية ({{ count }})',
+'Administration .search.results.head':"نتائج بحث  الإدارات",
 
 'submission.sections.describe.relationship-lookup.title.Era':'الحقب الزمنية',
 'era.search.results.head':"نتائج بحث الحقب الزمنية",
@@ -5396,8 +5396,8 @@
 'person.page.wikipedia':'ويكبيبديا',
 'person.page.address':'العنوان',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfPerson':'الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfPerson':' الإدارات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministration OfPerson':'الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministration OfPerson':' الإدارات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPlaceOfPerson':'الأماكن',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPlaceOfPerson':'الأماكن المحلية ({{ count }})',
@@ -5465,8 +5465,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPlace':'الأشخاص  المحليين ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfPlace':' الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfPlace':' الإدارات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministration OfPlace':' الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministration OfPlace':' الإدارات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfPlace':'المؤسسات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfPlace':'المؤسسات المحلية ({{ count }})',
@@ -5484,8 +5484,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfEvent':'الأشخاص  المحليين ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfEvent':' الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfEvent':' الإدارات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministration OfEvent':' الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministration OfEvent':' الإدارات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfEvent':'المؤسسات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfEvent':'المؤسسات المحلية ({{ count }})',
@@ -5534,8 +5534,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'الأشخاص  الحليين ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfSeries':'الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfSeries':' الإدارات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministration OfSeries':'الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministration OfSeries':' الإدارات المحلية ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isOrgUnitOfSeries":"المؤسسات",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfSeries":"المؤسسات المحلية ({{ count }})",
@@ -5583,8 +5583,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'الأشخاص  الحليين ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfProject':'الإدارات',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfProject':' الإدارات المحلية ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministration OfProject':'الإدارات',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministration OfProject':' الإدارات المحلية ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isOrgUnitOfProject":"المؤسسات",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject":"المؤسسات المحلية ({{ count }})",

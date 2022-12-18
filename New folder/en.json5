@@ -4974,8 +4974,8 @@
 'relationships.isManagingEditortOf.Person':'Managing editor',
 'relationships.isEditorialBoardOf.Person':'Editorial board members',
 
-'suborgunit.page.titleprefix':'Sub-Organizational Unit:',
-'suborgunit.listelement.badge':'Sub-Organizational Unit',
+'administration.page.titleprefix':'Sub-Organizational Unit:',
+'administration.listelement.badge':'Sub-Organizational Unit',
 
 'item.page.person':'People',
 
@@ -4984,7 +4984,7 @@
 'relationships.isEventOf':'Events',
 'relationships.isPlaceOf':'Places',
 'relationships.isEraOf':'Era',
-'relationships.isSubOrgUnitOf':'Departments',
+'relationships.isAdministrationOf':'Departments',
 
 'relationships.isOrgUnitOfSubOrg':"Chief Organizational Unit ",
 
@@ -5031,7 +5031,7 @@
 'event.page.description':'Schedule',
 
 
- "search.filters.entityType.SubOrgUnit":"Sub-Organizational Unit",
+ "search.filters.entityType.Administration":"Sub-Organizational Unit",
 "search.filters.entityType.Place":"Place",
 "search.filters.entityType.Event":"Event",
 "search.filters.entityType.Era":"Era",
@@ -5047,8 +5047,8 @@
 'submission.sections.describe.relationship-lookup.title.isEventOfPlace':'Events',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEventOfPlace':'Local Events ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isOrgUnitOfSubOrgUnit':'Organizational Units',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfSubOrgUnit':'Local Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isOrgUnitOfAdministration':'Organizational Units',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfAdministration':'Local Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPlaceOfEvent':'Places',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPlaceOfEvent':'Local Places ({{ count }})',
@@ -5069,9 +5069,9 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.Event':'Local Events ({{ count }})',
 'event.search.results.head':'Events Search Results',
 'journalissue.search.results.head':'Journal Issue Search Results',
-'submission.sections.describe.relationship-lookup.title.SubOrgUnit':'Sub-Organizational Units',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.SubOrgUnit':'Local Sub-Organizational Units ({{ count }})',
-'suborgunit.search.results.head':'Sub-Organizational Units Search Results',
+'submission.sections.describe.relationship-lookup.title.Administration':'Sub-Organizational Units',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.Administration':'Local Sub-Organizational Units ({{ count }})',
+'Administration.search.results.head':'Sub-Organizational Units Search Results',
 
 'submission.sections.describe.relationship-lookup.title.Era':'Eras',
 'era.search.results.head':'Eras Search Results',
@@ -5314,8 +5314,8 @@
 'person.page.wikipedia':'Wikipedia',
 'person.page.address':'Address',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfPerson':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfPerson':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfPerson':'Sub-Organizational Unit',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPerson':'Local Sub-Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPlaceOfPerson':'Places',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPlaceOfPerson':'Local Places ({{ count }})',
@@ -5371,8 +5371,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPlace':'Local People ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfPlace':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfPlace':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfPlace':'Sub-Organizational Unit',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPlace':'Local Sub-Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfPlace':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfPlace':'Local Organizational Units ({{ count }})',
@@ -5406,8 +5406,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfEvent':'Local People ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfEvent':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfEvent':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfEvent':'Sub-Organizational Unit',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfEvent':'Local Sub-Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfEvent':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfEvent':'Local Organizational Units ({{ count }})',
@@ -5456,8 +5456,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'Local People ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfSeries':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfSeries':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfSeries':'Sub-Organizational Unit',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfSeries':'Local Sub-Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfSeries':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfSeries':'Local Organizational Units ({{ count }})',
@@ -5513,8 +5513,8 @@
 
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'Local People ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isSubOrgUnitOfProject':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSubOrgUnitOfProject':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfProject':'Sub-Organizational Unit',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfProject':'Local Sub-Organizational Units ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfProject':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfProject':'Local Organizational Units ({{ count }})',
