@@ -1,0 +1,10 @@
+  ::ng-deep ds-root main{
+     margin-top: 180px !important;
+  }
+
+  @media screen and (max-width:768px){
+    ::ng-deep ds-root main{
+      margin-top: 145px !important;
+   }
+ 
+  }
