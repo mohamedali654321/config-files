@@ -1,0 +1,24 @@
+## Rejection email message
+##
+## {0}  Title of submission
+## {1}  Name of collection
+## {2}  Name of the rejector
+## {3}  Reason for the rejection
+## {4}  Link to 'My DSpace' page
+##
+#set($subject = 'DSpace: Submission Rejected')
+
+لقد قدمت: ${params[0]}
+
+الي الحاوية: ${params[1]}
+
+تم رفض تقديمك من قبل ${params[2]}
+مع الشرح التالي:
+
+${params[3]}
+
+لم يتم حذف تقديمك. يمكنك الوصول إليه من خلال
+صفحة "الدي سبيّس الخاص بي": ${params[4]}
+
+دي سبيّس
+

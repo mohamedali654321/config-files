@@ -1,0 +1,17 @@
+## Registration notification email
+##
+## Parameters: {0} The name of the DSpace instance
+##             {1} The URL of the DSpace instance
+##             {2} Name:
+##             {3} Email:
+##             {4} Registration Date:
+##
+## See org.dspace.core.Email for information on the format of this file.
+##
+#set($subject = 'DSpace: Registration Notification')
+
+تم تسجيل مستخدم جديد على ${params[0]} في ${params[1]}:
+
+الإسم:                   ${params[2]}
+البريد الالكتروني:                  ${params[3]}
+التاريخ:                   ${params[4]}

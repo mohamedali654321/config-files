@@ -1,0 +1,22 @@
+## Item Archived email message
+##
+## {0}  Title of submission
+## {1}  Name of collection
+## {2}  handle
+##
+#set($subject = 'DSpace: Submission Approved and Archived')
+
+لقد قدمت: ${params[0]}
+
+الي الحاوية: ${params[1]}
+
+تم قبول طلبك وأرشفته في الدي سبيّس ،
+وقد تم تخصيص المعرف التالي له:
+${params[2]}
+
+الرجاء استخدام هذا المعرف عند الاستشهاد بما قدمته.
+
+جزيل الشكر!
+
+
+دي سبيّس

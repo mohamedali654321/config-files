@@ -1,0 +1,24 @@
+## Workflow curation task notification email message
+##
+## {0}  Title of submission
+## {1}  Name of collection
+## {2}  Submitter's name
+## {3}  Name of task operating
+## {4}  Task result
+## {5}  Workflow action taken
+##
+#set($subject = 'DSpace: Curation Task Report')
+
+العنوان:         ${params[0]}
+الحاوية:    ${params[1]}
+مقدم بواسطة:  ${params[2]}
+
+مهمة التنظيم ${params[3]} تم اداؤه
+بالنتيجة التالية:
+
+${params[4]}
+
+الإجراء المتخذ بشأن الطلب: ${params[5]}
+
+دي سبيّس
+

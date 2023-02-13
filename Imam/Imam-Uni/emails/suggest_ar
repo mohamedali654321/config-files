@@ -1,0 +1,25 @@
+## E-mail sent with the information filled out in a suggest form.
+##
+## Parameters: {0} recipient name
+##             {1} sender name
+##             {2} repository name
+##             {3} item title
+##             {4} item handle URI
+##             {5} item local URL - may be used in lieu of {4} if not using handle server
+##             {6} collection name
+##             {7} sender message
+## See org.dspace.core.Email for information on the format of this file.
+##
+#set($subject = 'An item of interest from DSpace')
+
+مرحبا ${params[0]}:
+
+${params[1]} طلبنا أن نرسل لك هذا البريد الإلكتروني بخصوص عنصر متوفر في ${params[2]}.
+
+العنوان: ${params[3]}
+الموقع: ${params[5]}
+في الحاوية : ${params[6]}
+ رسالة شخصية: ${params[7]}
+
+يقوم نظام المستودعات الرقمية دي سبيّس بالتقاط المواد الرقمية وتخزينها وفهرستها وحفظها وتوزيعها.
+لمزيد من المعلومات ، قم بزيارة www.dspace.org

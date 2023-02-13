@@ -1,0 +1,26 @@
+## E-mail sent with the information filled out in a feedback form.
+##
+## Parameters: {0} current date
+##             {1} email address that the user provided
+##             {2} logged in as
+##             {3} page that the user was on when they selected feedback
+##             {4} User-Agent HTTP Header
+##             {5} Session Id
+##             {6} The user's comments
+##
+## See org.dspace.core.Email for information on the format of this file.
+##
+#set($subject = 'Feedback Form Information')
+
+تعليقات:
+
+${params[6]}
+
+
+التاريخ: ${params[0]}
+البريد الالكتروني: ${params[1]}
+تسجيل دخولك: ${params[2]}
+الصفحة المرجعية: ${params[3]}
+وكيل المستخدم: ${params[4]}
+الجلسة: ${params[5]}
+
