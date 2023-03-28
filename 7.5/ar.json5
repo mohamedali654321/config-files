@@ -2551,7 +2551,7 @@
 
   "person.page.givenName": "الاسم الأول",
 
-  "person.page.jobTitle": " الدور",
+  "person.page.jobTitle": "المسمي الوظيفي",
 
   "person.page.familyName": "الاسم الأخير",
 
@@ -3021,7 +3021,7 @@
 
   "search.filters.applied.f.submitter": "المقدم",
 
-  "search.filters.applied.f.jobTitle": "الدور",
+  "search.filters.applied.f.jobTitle": "المسمي الوظيفي",
 
   "search.filters.applied.f.birthDate.max": "نهاية تاريخ الميلاد",
 
@@ -3148,11 +3148,11 @@
 
   "search.filters.filter.itemtype.label": "بحث نوع الوثيقة",
 
-  "search.filters.filter.jobTitle.head": "الدور",
+  "search.filters.filter.jobTitle.head": "المسمي الوظيفي",
 
-  "search.filters.filter.jobTitle.placeholder": "الدور",
+  "search.filters.filter.jobTitle.placeholder": "المسمي الوظيفي",
 
-  "search.filters.filter.jobTitle.label": "بحث الدور",
+  "search.filters.filter.jobTitle.label": "بحث المسمي الوظيفي",
 
   "search.filters.filter.knowsLanguage.head": "لغة معروفة",
 
@@ -3506,14 +3506,14 @@
 
   "submission.sections.describe.relationship-lookup.selected": "{{ size }} مادة محددة",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "المؤلفين المحليين ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "المؤلفين/الباحثين المحليين ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfPublication": "الدوريات المحلية ({{ count }})",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Project": "المشروعات المحلية  ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Publication": "المنشورات المحلية ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "المؤلفين المحليين ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "المؤلفين/الباحثين المحليين ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.OrgUnit": " المؤسسات المحلية ({{ count }})",
 
@@ -3573,14 +3573,14 @@
 
   "submission.sections.describe.relationship-lookup.title.isJournalOfPublication": "الدوريات",
 
-  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "المؤلفين",
+  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "المؤلفين/الباحثين",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "الوكالة الممولة",
   "submission.sections.describe.relationship-lookup.title.Project": "المشروعات",
 
   "submission.sections.describe.relationship-lookup.title.Publication": "المنشورات",
 
-  "submission.sections.describe.relationship-lookup.title.Person": "المؤلفين",
+  "submission.sections.describe.relationship-lookup.title.Person": "المؤلفين/الباحثين",
 
   "submission.sections.describe.relationship-lookup.title.OrgUnit": " المؤسسات",
 
@@ -3600,7 +3600,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.no-selection": "تحديداتك فارغة حالياً.",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "المؤلفين المحددين",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "المؤلفين/الباحثين المحددين",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isJournalOfPublication": "الدوريات المحددة",
 
@@ -3609,7 +3609,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.Publication": "المنشورات المحددة",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "المؤلفين المحددين",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "المؤلفين/الباحثين المحددين",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.OrgUnit": " المؤسسات المحددة",
 
@@ -3697,7 +3697,7 @@
 
   "submission.sections.submit.progressbar.describe.stepcustom": "وصف",
 
-  "submission.sections.submit.progressbar.describe.stepone": "وصف",
+  "submission.sections.submit.progressbar.describe.stepone": "الوصف الأساسي",
 
   "submission.sections.submit.progressbar.uniDescribe.stepone": "الوصف المادي",
 
@@ -3713,7 +3713,7 @@
 
    "submission.sections.submit.progressbar.manuscriptObjectiveDescribe.stepone":" المصطلح الموضوعي",
 
-  "submission.sections.submit.progressbar.describe.steptwo": "وصف",
+  "submission.sections.submit.progressbar.describe.steptwo": "الوصف الاضافي",
 
   "submission.sections.submit.progressbar.detect-duplicate": "تكرارات محتملة",
 
@@ -4711,7 +4711,7 @@
 
   "submission.sections.describe.relationship-lookup.selected": "تم تحديد {{ size }} مادة",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "المؤلفون المحليون ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "المؤلفون/الباحثون المحليون ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfPublication": "الدوريات المحلية ({{ count }})",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Project": "المشروعات المحلية ({{ count }})",
@@ -4781,14 +4781,14 @@
 
   "submission.sections.describe.relationship-lookup.title.isJournalOfPublication": "الدوريات",
 
-  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "المؤلفون",
+  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "المؤلفون/الباحثون",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "الوكالة الممولة",
   "submission.sections.describe.relationship-lookup.title.Project": "المشروعات",
 
   "submission.sections.describe.relationship-lookup.title.Publication": "المنشورات",
 
-  "submission.sections.describe.relationship-lookup.title.Person": "المؤلفون",
+  "submission.sections.describe.relationship-lookup.title.Person": "المؤلفون/الباحثون",
 
   "submission.sections.describe.relationship-lookup.title.OrgUnit": "المؤسسات",
 
@@ -4808,7 +4808,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.no-selection": "تحديدك فارغ حالياً.",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "المؤلفين المحددين",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "المؤلفين/الباحثين المحددين",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isJournalOfPublication": "الدوريات المحددة",
 
@@ -4817,7 +4817,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.Publication": "المنشورات المحددة",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "المؤلفين المحددين",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "المؤلفين/الباحثين المحددين",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.OrgUnit": " المؤسسات المحددة",
 
@@ -5024,7 +5024,7 @@
 "process.detail.delete.success": "تم حذف العملية بنجاح.",
 "process.detail.delete.error": "حدث خطأ ما أثناء حذف العملية" ,
 
-'journalissue.page.frequancy':"تواتر النشر",
+'journalissue.page.frequancy':"تواتر النشر الحالي",
 'journalissue.page.tableofcontents':'جدول المحتويات',
 'journalissue.page.abstract':'المستخلص',
 
@@ -5076,7 +5076,7 @@
 'place.page.description':'المراجعة',
 'place.page.latitude':'دوائر العرض',
 'place.page.longitude':'خطوط الطول',
-'place.page.openingHoursSpecification':'مواصفات ساعات العمل',
+'place.page.openingHoursSpecification':' ساعات العمل',
 'place.page.publicAccess':'الوصول العام',
 'relationships.isEventOf':'الأحداث',
 
@@ -5115,7 +5115,7 @@
 'event.start.date':'من',
 'event.end.date':'إلي',
 
-'person.page.jobTitleDescription':'وصف الدور',
+'person.page.jobTitleDescription':'وصف المسمي الوظيفي',
 'relationships.isAdvisorOf.Person':'المشرفون',
 'relationships.isSeriesOf':'سلاسل',
 
@@ -5444,7 +5444,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfOrgUnit':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfOrgUnit':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfOrgUnit':'الأشخاص  المحليين ({{ count }})',
 
 'nav.demo.site':'موقع للعرض فقط',
 'place.page.zipCode':'الرمز البريدي',
@@ -5532,7 +5532,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfSeries':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSeries':'الأشخاص  المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAdministrationOfSeries':'الإدارات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfSeries':' الإدارات المحلية ({{ count }})',
@@ -5581,7 +5581,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfProject':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfProject':'الأشخاص  المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAdministrationOfProject':'الإدارات',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfProject':' الإدارات المحلية ({{ count }})',
@@ -5732,7 +5732,7 @@
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfPublication':'الأشخاص',
 
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPublication':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfPublication':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfPublication":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfPublication":"السلاسل المحلية ({{ count }})",
@@ -5741,10 +5741,10 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPublication':' الإدارات المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isDiscussionOfPublication':'أعضاء لجنة المناقشة والتحكيم المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPublisherOfPublication':'الناشرين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication':'الناشرين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublisherOfPublication':'الناشرين المحليين ({{ count }})',
 
 'submission.sections.submit.progressbar.publicationData.stepone':'بيانات الناشر',
 
@@ -5793,7 +5793,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfAdministration':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfAdministration':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfAdministration':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfAdministration':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfAdministration":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfAdministration":"السلاسل المحلية ({{ count }})",
@@ -5810,7 +5810,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfSite':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfSite':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSite':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfSite':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfSite":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfSite":"السلاسل المحلية ({{ count }})",
@@ -5834,7 +5834,7 @@
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isEraOfActivity':'الحقب الزمنية المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPersonOfActivity':'الأشخاص',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfActivity':'الأشخاص  الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPersonOfActivity':'الأشخاص  المحليين ({{ count }})',
 
 "submission.sections.describe.relationship-lookup.title.isSeriesOfActivity":"السلاسل",
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfActivity":"السلاسل المحلية ({{ count }})",
@@ -5860,41 +5860,41 @@
 
 
 'submission.sections.describe.relationship-lookup.title.isFunderOfActivity':'مؤسسي الفعالية',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfActivity':'مؤسسي الفعالية الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfActivity':'مؤسسي الفعالية المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isMangerOfActivity':'مديري الفعالية',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfActivity':'مديري الفعالية الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfActivity':'مديري الفعالية المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAttendeeOfActivity':'الحضور',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfActivity':' الحضور الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfActivity':' الحضور المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSponsorOfActivity':'الرعاة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfActivity':' الرعاة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfActivity':' الرعاة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrganizerOfActivity':'الجهة المنظمة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfActivity':' الجهات المنظمة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfActivity':' الجهات المنظمة المحلية ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isParticipantOfActivity':'المشاركين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين المحليين ({{ count }})',
 
 
 'submission.sections.describe.relationship-lookup.title.isFunderOfEvent':'مؤسسي الحدث',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfEvent':'مؤسسي الحدث الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isFunderOfEvent':'مؤسسي الحدث المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isMangerOfEvent':'مديري الحدث',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfEvent':'مديري الحدث الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isMangerOfEvent':'مديري الحدث المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isAttendeeOfEvent':'الحضور',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfEvent':' الحضور الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAttendeeOfEvent':' الحضور المحلي ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isSponsorOfEvent':'الرعاة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfEvent':' الرعاة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSponsorOfEvent':' الرعاة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrganizerOfEvent':'الجهة المنظمة',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfEvent':' الجهات المنظمة الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrganizerOfEvent':' الجهات المنظمة المحليين ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isParticipantOfEvent':'المشاركين',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين الحليين ({{ count }})',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isParticipantOfActivity':' المشاركين المحليين ({{ count }})',
 
 'footer.quick.links5':'مكتبة الجامعة',
 
@@ -6164,4 +6164,41 @@
    "profile.security.form.label.current-password": "كلمة المرور الحالية" ,
 
    'suborgunit-previous-label':'(سابقًا)',
+
+   'entity.add':'إضافة',
+
+   'organization.page.website':'رابط الاتصال',
+
+   'page.page.fax':'رقم الفاكس',
+
+     "admin.registries.bitstream-formats.table.id" : "المعرّف",
+     "admin.registries.schema.fields.table.id" : "المعرّف",
+      "sorting.person.familyName.ASC":"الاسم الأخير تصاعدياً",
+    "sorting.person.givenName.ASC":"الاسم الأول تصاعدياً",
+    "sorting.person.birthDate.DESC":"تاريخ الميلاد تنازلياً",
+
+
+    'search.filters.filter.content.head':'طبيعة المحتوى',
+ 'search.filters.filter.content.label':'بحث  طبيعة المحتوى',
+ 'search.filters.filter.content.placeholder':' طبيعة المحتوى',
+  "search.filters.applied.f.content": "طبيعة المحتوى",
+
+  'item.page.content':'طبيعة المحتوى',
+
+  'journalissue.page.oldFrequancy':'تواتر النشر السابق',
+
+  'new.name.variant':'متغير الاسم الجديد',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isAdministrationOfPublication':'الإدارات المحددة',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isPersonOfPublication':'الأشخاص المحددين',
+
+
+  'statistics.table.header':'مشاهدة',
+
+
+  'submission.sections.describe.relationship-lookup.title.isAdministrationOfOrgUnit':'الإدارات',
+  'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfOrgUnit':' الإدارات المحلية ({{ count }})',
+
+
 }

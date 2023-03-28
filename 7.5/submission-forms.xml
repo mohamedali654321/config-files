@@ -346,7 +346,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <relation-field>
                     <relationship-type>isAdvisorsOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>Advisor</label>
                     <hint>Enter the advisor's name (Family name, Given names).</hint>
                     <linked-metadata-field>
@@ -434,6 +434,20 @@ it, please enter the types and the actual numbers or codes below.</hint>
                     <!--<externalsources>pubmed</externalsources>-->
                     
                 </relation-field>
+ </row> 
+
+  <row>
+                	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>specialization</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Specialization Name</label>
+          <input-type value-pairs-name="specialization_list">dropdown</input-type>
+         <hint> Enter the name of the Specialization .</hint>
+         <required></required>
+       
+	</field>
             </row> 
 
 
@@ -453,20 +467,19 @@ it, please enter the types and the actual numbers or codes below.</hint>
 	</field>
 	</row> -->
 
-<row>
+<!-- <row>
 	<field>
          <dc-schema>dc</dc-schema>
          <dc-element>relation</dc-element>
          <dc-qualifier>specialization</dc-qualifier>
-         <repeatable>false</repeatable>
+         <repeatable>true</repeatable>
          <label>Specialization Name</label>
           <input-type value-pairs-name="specialization_list">dropdown</input-type>
-         <!-- <input-type>onebox</input-type> -->
          <hint> Enter the name of the Specialization .</hint>
          <required></required>
        
 	</field>
-	</row>
+	</row> -->
 
 
 <!-- 
@@ -544,9 +557,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
          <dc-element>type</dc-element>
          <dc-qualifier></dc-qualifier>
          <repeatable>false</repeatable>
-         <default-value>University Dissertations | رسالة جامعية</default-value>
-         <value>University Dissertations | رسالة جامعية</value>
-         <label>Type</label>
+         <label>Document type</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint> Select the type(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
          <required></required>
@@ -855,6 +866,101 @@ known.</hint>
 
 
   </form>
+
+
+
+
+  <form name="articlePublicationDataStep">
+
+
+ 
+
+	<row>
+                <relation-field>
+                 <relationship-type>isPublisherOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>false</repeatable>
+                    <label>Publisher</label>
+                     <hint>Enter the name of the publisher of the previously edited version of this article.</hint>
+                       <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                       <dc-element>publisher</dc-element>
+                       <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <!--<externalsources>pubmed</externalsources>-->
+                </relation-field>
+	</row>
+  
+
+  <row>
+
+         <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Country</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                   <hint>Enter the name of the country where this article was published.</hint>
+                    <required></required>
+                </field>
+
+                 <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>city</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>City</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                   <hint>Enter the name of the city where this article was published.</hint>
+                    <required></required>
+                </field>
+ </row>
+
+             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Gregorian publication date</label>
+                    <style>col-sm-6</style>
+                    <input-type>date</input-type>
+                    <hint>Please provide the date of previous publication or general distribution below. You can leave out the day and/or month if it is not applicable.
+                    </hint>
+                    <required>You must enter gregorian publication date </required>
+                </field>
+
+               	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Hijri publication date</label>
+         <style>col-sm-6</style>
+         <input-type>onebox</input-type>
+         <hint>Please provide the Hijri date for public distribution or previous publication
+above. You can ignore the day and/or month if they are not there
+known.</hint>
+         <required> </required>
+       
+	</field>
+
+                </row>
+
+
+
+
+
+
+
+
+
+  </form>
+
 
        
 
@@ -1370,13 +1476,27 @@ known.</hint>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Type</label>
+                    <label>Document type</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
                     <hint>Select the type of content of the item.
                     </hint>
                     <required></required>
                 </field>
             </row>
+
+
+                    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ContentType</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+<hint>Specify the content type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1463,7 +1583,7 @@ known.</hint>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Type</label>
+                    <label>Document type</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
                     <hint>Select the type(s) of content of the item. To select more than one value in the list, you may
                         have to hold down the "CTRL" or "Shift" key.
@@ -1471,6 +1591,19 @@ known.</hint>
                     <required></required>
                 </field>
             </row>
+
+                    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ContentType</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+<hint>Specify the content type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
 
             <row>
                 <relation-field>
@@ -2317,9 +2450,9 @@ known.</hint>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>nationality</dc-element>
-                    <label>Ethnicity or Nationality</label>
+                    <label>Nationality</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the race/nationality of the person</hint>
+                    <hint>Enter  nationality of person</hint>
                 </field>
             </row>
 
@@ -2553,9 +2686,9 @@ known.</hint>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>nationality</dc-element>
-                    <label>Ethnicity or Nationality</label>
+                    <label>Nationality</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the race/nationality of the person</hint>
+                    <hint>Enter  nationality of person</hint>
                 </field>
             </row>
 
@@ -2821,7 +2954,7 @@ known.</hint>
 </row> -->
             
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfAuthor</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -2836,7 +2969,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
           <row>
@@ -3396,7 +3529,7 @@ known.</hint>
 	</row>
 
 
-
+<!-- 
             <row>
                 <relation-field>
                     <relationship-type>isPublicationOfProject</relationship-type>
@@ -3412,7 +3545,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
 
@@ -3881,7 +4014,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -3890,7 +4023,7 @@ known.</hint>
 	</row>
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfAdministration</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -3905,7 +4038,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
           <row>
@@ -4025,7 +4158,7 @@ known.</hint>
                 </field>
             </row>
 
-               <row>
+               <!-- <row>
 	<field>
          <dc-schema>dc</dc-schema>
          <dc-element>relation</dc-element>
@@ -4051,7 +4184,7 @@ known.</hint>
          <required></required>
        
 	</field>
-	</row>
+	</row> -->
 
           <row>
                 <field>
@@ -4064,7 +4197,7 @@ known.</hint>
             </row>
 
 
-
+<!-- 
  <row>
                 <field>
                      <dc-schema>organization</dc-schema>
@@ -4085,6 +4218,19 @@ known.</hint>
                     <input-type>textarea</input-type>
                     <hint>Enter the job title description of the organization</hint>
                 </field>
+            </row> -->
+
+
+
+                               <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Address of the organization</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the address of the organization</hint>
+                </field>
             </row>
 
 
@@ -4100,16 +4246,7 @@ known.</hint>
             </row>
 
 
-                   <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>Address</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the address of the organization</hint>
-                </field>
-            </row>
+
 
             <row>
                 <field>
@@ -4297,15 +4434,15 @@ known.</hint>
 
          <row>
                 <relation-field>
-                     <relationship-type>isOrgUnitOfadministration</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfOrgUnit</relationship-type>
+                    <search-configuration>administration</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Parent organization(the organization to which this organization is affiliated)</label>
-                    <hint>Enter the parent organization to which the organization belongs.</hint>
+                    <label>Administrations</label>
+                    <hint>Enter the administration.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
-                         <dc-element>relation</dc-element>
-                       <dc-qualifier>ispartof</dc-qualifier>
+                         <dc-element>childLegalName</dc-element>
+                       <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <!--<externalsources>pubmed</externalsources>-->
@@ -4326,7 +4463,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -4335,7 +4472,7 @@ known.</hint>
 	</row>
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfOrgunit</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -4350,7 +4487,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
           <row>
@@ -4892,7 +5029,7 @@ known.</hint>
                        <dc-schema>event</dc-schema>
                         <dc-element>manger</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -5001,7 +5138,7 @@ known.</hint>
 	</row> -->
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfEvent</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -5016,7 +5153,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
             	<row>
@@ -5030,7 +5167,7 @@ known.</hint>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -5353,13 +5490,13 @@ known.</hint>
                     <relationship-type>isMangerOfActivity</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Event manger</label>
-                   <hint>Enter event manger's name (last name, first name).</hint>
+                    <label>Activity manger</label>
+                   <hint>Enter activity manger's name (last name, first name).</hint>
                     <linked-metadata-field>
                        <dc-schema>event</dc-schema>
                         <dc-element>manger</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -5468,7 +5605,7 @@ known.</hint>
 	</row> -->
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfActivity</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -5483,7 +5620,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
             	<row>
@@ -5497,7 +5634,7 @@ known.</hint>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -6191,7 +6328,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -6199,7 +6336,7 @@ known.</hint>
                 </relation-field>
 	</row>
 
-            
+<!--             
             <row>
                 <relation-field>
                     <relationship-type>isPublicationOfSeries</relationship-type>
@@ -6215,7 +6352,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
 
@@ -6713,7 +6850,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -6722,7 +6859,7 @@ known.</hint>
 	</row>
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfPlace</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -6737,7 +6874,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
           <row>
@@ -7053,7 +7190,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -7062,7 +7199,7 @@ known.</hint>
 	</row>
 
             
-            <row>
+            <!-- <row>
                 <relation-field>
                     <relationship-type>isPublicationOfSite</relationship-type>
                     <search-configuration>publication</search-configuration>
@@ -7077,7 +7214,7 @@ known.</hint>
                     </linked-metadata-field>
                     <externalsources>pubmed</externalsources>
                 </relation-field>
-            </row>
+            </row> -->
 
 
           <row>
@@ -7252,96 +7389,10 @@ known.</hint>
 
         <!-- Form which defines the metadata page/section for depositing Journal Entities -->
         <form name="researchpublicationStep">
-	<row>
-		<field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>Type</label>
-                    <input-type value-pairs-name="research_study_common_types">dropdown</input-type>
-<hint>Specify the content type of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key. </hint>                    <required></required>
-		</field>
-	</row>
-
-	<row>
-                <relation-field>
-                    <relationship-type>isAuthorOfPublication</relationship-type>
-                    <search-configuration>person</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>Author</label>
-                  <hint>Enter the author's name (last name, first name). </hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>author</dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <externalsources>orcid</externalsources>
-                    <required></required>
-                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
-                         your institution. The below regex requires a comma to be present in the author field.
-                         However, this is disabled by default to support organizations as authors, etc. -->
-                    <!--<regex>\w+(,)+\w+</regex>-->
-                </relation-field>
-	</row>
-	
-	
-		<row>
-                <relation-field>
-                    <relationship-type>isPersonOfPublication</relationship-type>
-                    <search-configuration>person</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>Persons</label>
-                    <hint>Enter the person's name (last name, first name).</hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>person</dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <externalsources>orcid</externalsources>
-                    <required></required>
-                   
-                </relation-field>
-	</row>
-
-	<row>
-                <relation-field>
-                 <relationship-type>isOrgUnitOfPublication</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>Organization</label>
-                    <hint>Import an organization or enter an organization name</hint>
-                       <linked-metadata-field>
-                        <dc-schema>organization</dc-schema>
-                        <dc-element>legalName</dc-element>
-                        <dc-qualifier></dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <!--<externalsources>pubmed</externalsources>-->
-                </relation-field>
-	</row>
 
 
 
-	<row>
-                <relation-field>
-                 <relationship-type>isJournalIssueOfPublication</relationship-type>
-                    <search-configuration>journalissue</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>Journal Issue</label>
-                   <hint>Import a issue or enter a issue</hint>
-                       <linked-metadata-field>
-                        <dc-schema>publicationissue</dc-schema>
-                        <dc-element>issueNumber</dc-element>
-                        <dc-qualifier></dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                </relation-field>
-	</row>
-
-	<row>
+        	<row>
 		<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
@@ -7366,18 +7417,84 @@ known.</hint>
 		</field>
 	</row>
 
+
 	<row>
-		<field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Physical Description</label>
-                    <input-type>onebox</input-type>
-                    <hint>Please enter a physical description of the item.</hint>
+                    <label>Author</label>
+                  <hint>Enter the author's name (last name, first name). </hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
                     <required></required>
-		</field>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
 	</row>
+	
+	
+		<!-- <row>
+                <relation-field>
+                    <relationship-type>isPersonOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Persons</label>
+                    <hint>Enter the person's name (last name, first name).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>person</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                   
+                </relation-field>
+	</row> -->
+
+	<!-- <row>
+                <relation-field>
+                 <relationship-type>isOrgUnitOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Organization</label>
+                    <hint>Import an organization or enter an organization name</hint>
+                       <linked-metadata-field>
+                        <dc-schema>organization</dc-schema>
+                        <dc-element>legalName</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row> -->
+
+
+
+	<row>
+                <relation-field>
+                 <relationship-type>isJournalIssueOfPublication</relationship-type>
+                    <search-configuration>journalissue</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Journal Issue</label>
+                   <hint>Import a issue or enter a issue</hint>
+                       <linked-metadata-field>
+                         <dc-schema>journalissue</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row>
+
+
 
 	<row>
 		<field>
@@ -7386,11 +7503,55 @@ known.</hint>
                     <dc-qualifier>abstract</dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Abstract</label>
-                    <input-type>onebox</input-type>
+                    <input-type>textarea</input-type>
                     <hint>Please enter an item abstract.</hint>
                     <required></required>
 		</field>
 	</row>
+
+
+
+    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Document type</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+<hint>Specify  type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
+
+
+        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ContentType</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+<hint>Specify the content type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Physical Description</label>
+                    <input-type>textarea</input-type>
+                    <hint>Please enter a physical description of the item.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
 
 
 	<row>
@@ -7517,6 +7678,317 @@ known.</hint>
 	</row>
 
 </form>
+
+<!-- article form -->
+
+  <form name="articleStep">
+
+
+
+        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Title</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the main title of the article.</hint>
+                    <required>You must enter a main title for this item.</required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Other titles</label>
+                    <input-type>onebox</input-type>
+                    <hint>If the item contains any alternative title , please enter them here.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+	<row>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Author</label>
+                  <hint>Enter the author's name (last name, first name). </hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
+	</row>
+	
+	
+		<!-- <row>
+                <relation-field>
+                    <relationship-type>isPersonOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Persons</label>
+                    <hint>Enter the person's name (last name, first name).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>person</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                   
+                </relation-field>
+	</row> -->
+
+	<!-- <row>
+                <relation-field>
+                 <relationship-type>isOrgUnitOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Organization</label>
+                    <hint>Import an organization or enter an organization name</hint>
+                       <linked-metadata-field>
+                        <dc-schema>organization</dc-schema>
+                        <dc-element>legalName</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row> -->
+
+
+
+	<row>
+                <relation-field>
+                 <relationship-type>isJournalIssueOfPublication</relationship-type>
+                    <search-configuration>journalissue</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>Journal Issue</label>
+                   <hint>Import a issue or enter a issue</hint>
+                       <linked-metadata-field>
+                        <dc-schema>journalissue</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row>
+
+
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Abstract</label>
+                    <input-type>textarea</input-type>
+                    <hint>Please enter an item abstract.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Document type</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+<hint>Specify  type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
+
+
+        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>ContentType</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+<hint>Specify the content type of the item. </hint>            
+        <required></required>
+		</field>
+	</row>
+
+
+
+	<!-- <row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>publishing date</label>
+                    <style>col-sm-4</style>
+                    <input-type>date</input-type>
+                   <hint>
+                    Please provide the date of public distribution or previous publication above. You can omit the day and/or month if they are not known.
+                     </hint>
+                    <required>You must enter at least the year.</required>
+		</field>
+
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Publisher</label>
+                    <style>col-sm-8</style>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the name of the publisher of the previously edited version of this item.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+	<row>
+		<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Hijri Date</label>
+         <input-type>onebox</input-type>
+<hint>Please provide the Hijri date for public distribution or previous publication
+above. You can ignore the day and/or month if they are not there
+known.</hint>
+         <required> </required>
+       
+		</field>
+	</row> -->
+
+
+           <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>source</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Source</label>
+                    <input-type>onebox</input-type>
+                    
+                    <required></required>
+                </field>
+            </row>
+    
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier>iso</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Language</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Specify the language of the main content of the item. If the language does not appear in the list, please select "Other". If the content does not already contain language (for example, if it is a data set or an image), please select "Not Available".
+                     </hint>
+                    <required></required>
+		</field>
+	</row>
+
+                    <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Keywords</label>
+                    <input-type>tag</input-type>
+                    <hint>Enter keywords or phrases appropriate to the subject.</hint>
+                    <required></required>
+                </field>
+	</row>
+
+</form>
+
+
+
+
+  <form name="articlePhysicalDescription">
+
+
+
+  	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>Physical Description</label>
+                    <input-type>textarea</input-type>
+                    <hint>Please enter a physical description of the item.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
+
+  	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Citation</label>
+                    <input-type>onebox</input-type>
+                    <hint>Insert the standard citation for the previously edited version of this item.</hint>
+                    <required></required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>relation</dc-element>
+                    <dc-qualifier>ispartofseries</dc-qualifier>
+                    <repeatable>true</repeatable>
+                   <label>Series/Report No.</label>
+                    <input-type>series</input-type>
+                    <hint>Enter the series and number assigned to this item by your community.</hint>
+                    <required></required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>Identifiers</label>
+                    <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                    <hint>If an item has {a chars or identifiers associated with it, please enter the actual types and numbers or identifiers below.
+                     </hint>
+                    <required></required>
+		</field>
+	</row>
+
+        </form>
+
+ <!-- article form        -->
+
+
         
         
         <form name="journalStep">
@@ -7524,7 +7996,7 @@ known.</hint>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>Name</label>
+                    <label>Title</label>
                     <input-type>onebox</input-type>
                     <hint>Enter the name of the journal</hint>
                 </field>
@@ -7686,6 +8158,20 @@ known.</hint>
                     <hint>Enter the issn of the journal</hint>
                 </field>
             </row>
+
+                                    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>frequancy</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Previous publishing frequency</label>
+                    <input-type value-pairs-name="common_frequancy">dropdown</input-type>
+                    <hint>Select the type of publishing frequency </hint>
+                    
+                    <required></required>
+		</field>
+	</row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -7695,7 +8181,25 @@ known.</hint>
                     <hint>Enter the description of the journal</hint>
                 </field>
             </row>
-            <row>
+            <!-- <row>
+                <field>
+                    <dc-schema>creativework</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <label>Publisher</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the publisher of the journal</hint>
+                </field>
+            </row> -->
+
+        </form>
+
+
+        <form name="journalPublicationDataStep">
+
+
+ 
+
+    <row>
                 <field>
                     <dc-schema>creativework</dc-schema>
                     <dc-element>publisher</dc-element>
@@ -7704,8 +8208,75 @@ known.</hint>
                     <hint>Enter the publisher of the journal</hint>
                 </field>
             </row>
+  
 
-        </form>
+  <row>
+
+         <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Country</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                   <hint>Enter the name of the country where this journal was published.</hint>
+                    <required></required>
+                </field>
+
+                 <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>city</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>City</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                   <hint>Enter the name of the city where this journal was published.</hint>
+                    <required></required>
+                </field>
+ </row>
+
+             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Gregorian publication date</label>
+                    <style>col-sm-6</style>
+                    <input-type>date</input-type>
+                    <hint>Please provide the date of previous publication or general distribution below. You can leave out the day and/or month if it is not applicable.
+                    </hint>
+                    <required></required>
+                </field>
+
+               	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Hijri publication date</label>
+         <style>col-sm-6</style>
+         <input-type>onebox</input-type>
+         <hint>Please provide the Hijri date for public distribution or previous publication
+above. You can ignore the day and/or month if they are not there
+known.</hint>
+         <required> </required>
+       
+	</field>
+
+                </row>
+
+
+
+
+
+
+
+
+
+  </form>
 
         <!-- Form which defines the metadata page/section for depositing JournalVolume Entities -->
         <form name="journalVolumeStep">
@@ -7717,6 +8288,12 @@ known.</hint>
                     <!--<filter>creativework.publisher:somepublishername</filter>-->
                     <label>Journal</label>
                     <hint>Select the journal related to this volume.</hint>
+                        <linked-metadata-field>
+                        <dc-schema>journal</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
                     <externalsources>sherpaJournal</externalsources>
                 </relation-field>
             </row>
@@ -7724,7 +8301,7 @@ known.</hint>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>Name</label>
+                    <label>Title</label>
                     <input-type>onebox</input-type>
                     <hint>Enter the name of the journal volume</hint>
                 </field>
@@ -7766,13 +8343,19 @@ known.</hint>
                     <search-configuration>journalvolume</search-configuration>
                     <label>Journal Volume</label>
                     <hint>Select the journal volume related to this issue.</hint>
+                          <linked-metadata-field>
+                        <dc-schema>journalvolume</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
                 </relation-field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>Name</label>
+                    <label>Title</label>
                     <input-type>onebox</input-type>
                     <hint>Enter the name of the journal issue</hint>
                 </field>
@@ -7788,7 +8371,22 @@ known.</hint>
             </row>
 
 
-                        	<row>
+            	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier>iso</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Language</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>Specify the language of the main content of the item. If the language does not appear in the list, please select "Other". If the content does not already contain language (for example, if it is a data set or an image), please select "Not Available".
+                     </hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+                        	<!-- <row>
 		<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
@@ -7800,7 +8398,7 @@ known.</hint>
                     
                     <required></required>
 		</field>
-	</row>
+	</row> -->
 
             <row>
                 <field>
@@ -7811,6 +8409,23 @@ known.</hint>
                     <hint>Enter the issue date of the journal issue</hint>
                 </field>
             </row>
+   <row>
+                           	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Hijri publication date</label>
+         <input-type>onebox</input-type>
+         <hint>Please provide the Hijri date for public distribution or previous publication
+above. You can ignore the day and/or month if they are not there
+known.</hint>
+         <required> </required>
+       
+	</field>
+
+                </row>
+
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -7842,16 +8457,18 @@ known.</hint>
                     <hint>Enter the table of contents of the journal issue</hint>
                 </field>
             </row>
-            <row>
+                    <row>
                 <field>
-                    <dc-schema>creativework</dc-schema>
-                    <dc-element>keywords</dc-element>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
                     <label>Keywords</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the keywords of the journal issue</hint>
+                    <input-type>tag</input-type>
+                    <hint>Enter keywords or phrases appropriate to the subject.</hint>
+                    <required></required>
                 </field>
-            </row>
+	</row>
 
         </form>
 
@@ -7894,7 +8511,7 @@ known.</hint>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>author</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required>At least one author (plain text or relationship) is required</required>
@@ -8072,7 +8689,7 @@ known.</hint>
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>Type</label>
+                    <label>Document type</label>
                     <input-type value-pairs-name="openaire_types">dropdown</input-type>
                     <hint>Select the type(s) of content of the item. To select more than one value in the list, you may
                         have to hold down the "CTRL" or "Shift" key.
@@ -8510,7 +9127,7 @@ known.</hint>
                     <relationship-type>isOrgUnitOfPublication</relationship-type>
                     <search-configuration>orgunit</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>It belongs to a library</label>
+                   <label>The name of the library the manuscript belongs to</label>
                     <hint>Import It belongs to a library or enter the name of It belongs to a library</hint>
                        <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
@@ -8537,7 +9154,7 @@ known.</hint>
                         <dc-element>legalName</dc-element>
                         <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
-                    </linked-metadata-field>>
+                    </linked-metadata-field>
                     <!--<externalsources>pubmed</externalsources>-->
                 </relation-field>
             </row>
@@ -9271,7 +9888,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
 
          
- <value-pairs value-pairs-name="media_types" dc-term="type">
+ <!-- <value-pairs value-pairs-name="media_types" dc-term="type">
            
             <pair>
                 <displayed-value>Text</displayed-value>
@@ -9297,6 +9914,47 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <displayed-value>Video</displayed-value>
                 <stored-value>Video | فيديو</stored-value>
             </pair>
+               
+        </value-pairs> -->
+
+        <value-pairs value-pairs-name="media_types" dc-term="type">
+           
+            <pair>
+                <displayed-value>Text</displayed-value>
+                <stored-value>Text |  نص</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Image</displayed-value>
+                <stored-value>Image | صورة</stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>Video</displayed-value>
+                <stored-value>Video | فيديو</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Sound</displayed-value>
+                <stored-value>Sound | صوت</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>3D Image</displayed-value>
+                <stored-value>3D Image | صورة بثلاث أبعاد</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Virtual Reality</displayed-value>
+                <stored-value>Virtual Reality | واقع افتراضي</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Augumented Reality</displayed-value>
+                <stored-value>Augumented Reality | واقع مُعزّز</stored-value>
+            </pair>
+
+          
                
         </value-pairs>
 
@@ -10091,9 +10749,20 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <stored-value>Master Thesis | رسالة ماجستير</stored-value>
             </pair>
 
+
+                <pair>
+                <displayed-value>Complementary research to obtain a master's degree</displayed-value>
+                <stored-value>Complementary research to obtain a master's degree | بحث تكميلي لنيل درجة الماجستير</stored-value>
+            </pair>
+
              <pair>
                 <displayed-value>Phd Dissertation</displayed-value>
                 <stored-value>Phd Dissertation | اطروحة دكتوراه</stored-value>
+            </pair>
+
+       <pair>
+                <displayed-value>دبلوم عالي</displayed-value>
+                <stored-value>Higher Diploma | دبلوم عالي</stored-value>
             </pair>
 
              <pair>
@@ -10209,7 +10878,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
              <pair>
                 <displayed-value>Jr. (Junior)</displayed-value>
-                <stored-value>Jr. | مبتدئ</stored-value>
+                <stored-value>Jr. | الابن</stored-value>
             </pair>
 
 
@@ -10231,13 +10900,13 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
 
             <pair>
-                <displayed-value>Messrs. (plural of Mr.)</displayed-value>
+                <displayed-value>Messrs</displayed-value>
                 <stored-value>Messrs. | السادة</stored-value>
             </pair>
 
 
             <pair>
-                <displayed-value>Mmes. (plural of Mrs.)</displayed-value>
+                <displayed-value>Mmes</displayed-value>
                 <stored-value> Mmes. | السيدات</stored-value>
             </pair>
 
@@ -10256,6 +10925,16 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <stored-value>Prof. Dr. | استاذ دكتور</stored-value>
             </pair>
 
+              <pair>
+                <displayed-value>Sheikh</displayed-value>
+                <stored-value>Sheikh | الشيخ</stored-value>
+               </pair>
+
+
+              <pair>
+                <displayed-value>Preacher</displayed-value>
+                <stored-value>Preacher | الداعية</stored-value>
+            </pair>
 
             <pair>
                 <displayed-value>Rev. (Reverend)</displayed-value>
@@ -10592,7 +11271,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
     </value-pairs>
 
 
-        <value-pairs value-pairs-name="common_types" dc-term="type">
+        <!-- <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
                 <displayed-value>Animation</displayed-value>
                 <stored-value>Animation | صور متحركة</stored-value>
@@ -10712,6 +11391,109 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <displayed-value>Other</displayed-value>
                 <stored-value>Other | أخرى</stored-value>
             </pair>
+        </value-pairs> -->
+
+
+
+         <value-pairs value-pairs-name="common_types" dc-term="type">
+
+                    <pair>
+                <displayed-value>Article</displayed-value>
+                <stored-value>Article | مقال</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Book</displayed-value>
+                <stored-value>Book | كتاب</stored-value>
+            </pair>
+             <pair>
+                <displayed-value>Manuscript</displayed-value>
+                <stored-value>Manuscript | مخطوطة</stored-value>
+            </pair>
+
+                 <pair>
+                <displayed-value>University Dissertations</displayed-value>
+                <stored-value>University Dissertations | رسالة جامعية</stored-value>
+            </pair>
+
+               <pair>
+                <displayed-value>Presentation</displayed-value>
+                <stored-value>Presentation | عرض تقديمي</stored-value>
+            </pair>
+            
+            <pair>
+                <displayed-value>Dataset</displayed-value>
+                <stored-value>Dataset | بيانات</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Preprint</displayed-value>
+                <stored-value>Preprint | نموذج ما قبل الطباعة</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Recording oral</displayed-value>
+                <stored-value>Recording oral | تسجيل شفوي</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Software</displayed-value>
+                <stored-value>Software | برمجيات</stored-value>
+            </pair>
+
+
+            <pair>
+                <displayed-value>E-Book</displayed-value>
+                <stored-value>E-Book | كتاب إلكتروني</stored-value>
+            </pair>
+          <pair>
+                <displayed-value>Musical Score</displayed-value>
+                <stored-value>Musical Score | نوتة موسيقية</stored-value>
+            </pair>
+
+
+             <pair>
+                <displayed-value>Map</displayed-value>
+                <stored-value>Map | خريطة</stored-value>
+            </pair>
+            
+              <pair>
+                <displayed-value>Rare Book</displayed-value>
+                <stored-value>Rare Book | كتاب نادر</stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>Precious Possession</displayed-value>
+                <stored-value>Precious Possession | مقتنى ثمين</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Microfilm</displayed-value>
+                <stored-value>Microfilm | فيلم مصغر</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Compact Disc</displayed-value>
+                <stored-value>Compact Disc | قرص مضغوط</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Cassette Tape</displayed-value>
+                <stored-value>Cassette Tape | شريط (كاسيت)</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Newspaper</displayed-value>
+                <stored-value>Newspaper | صحيفة ورقية</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Painting</displayed-value>
+                <stored-value>Painting | لوحة فنية</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>Ancient Relics</displayed-value>
+                <stored-value>Ancient Relics | آثار قديمة</stored-value>
+            </pair>
+
+
+
         </value-pairs>
 
 
@@ -10758,10 +11540,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
             </pair>
         
-            <pair>
-                <displayed-value>N/A</displayed-value>
-                <stored-value></stored-value>
-            </pair>
+        
             <pair>
                 <displayed-value>English (United States)</displayed-value>
                 <stored-value>English | الإنجليزية</stored-value>
@@ -10805,6 +11584,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
             <pair>
                 <displayed-value>(Other)</displayed-value>
                 <stored-value>Other | أخرى</stored-value>
+            </pair>
+
+                <pair>
+                <displayed-value>N/A</displayed-value>
+                <stored-value></stored-value>
             </pair>
         </value-pairs>
 
@@ -11257,6 +12041,143 @@ it, please enter the types and the actual numbers or codes below.</hint>
             </pair>
         </value-pairs>
 <!-- ############# Kwareict Additions Start ################# -->
+
+
+ <value-pairs value-pairs-name="content_types" dc-term="type">
+           
+            <pair>
+                <displayed-value>Research</displayed-value>
+                <stored-value>Research | بحث</stored-value>
+            </pair>
+
+                 <pair>
+                <displayed-value>Report</displayed-value>
+                <stored-value>Report | تقرير </stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>Study</displayed-value>
+                <stored-value>Study | دراسة </stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Working Paper</displayed-value>
+                <stored-value>Working Paper | ورقة عمل</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Plan or blueprint</displayed-value>
+                <stored-value>Plan or blueprint | خطة أو مخطط</stored-value>
+            </pair>
+
+
+            <pair>
+                <displayed-value>Dialogue</displayed-value>
+                <stored-value>Dialogue | حوار</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Interview</displayed-value>
+                <stored-value>Interview | مقابلة</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Seminar</displayed-value>
+                <stored-value>Seminar | ندوة</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Conference Thesis</displayed-value>
+                <stored-value>Conference Thesis | أطروحة مؤتمر</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Statistics</displayed-value>
+                <stored-value>Statistics | احصائيات</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Event</displayed-value>
+                <stored-value>Event | حدث</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Novel</displayed-value>
+                <stored-value>Novel | رواية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Story</displayed-value>
+                <stored-value>Story | قصة</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Play</displayed-value>
+                <stored-value>Play | مسرحية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Poetry</displayed-value>
+                <stored-value>Poetry | شعر</stored-value>
+            </pair>
+
+
+             <pair>
+                <displayed-value>Speeches</displayed-value>
+                <stored-value>Speeches | خطب</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Treaties</displayed-value>
+                <stored-value>Treaties | معاهدات</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Legislation</displayed-value>
+                <stored-value>Legislation | تشريع</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Film</displayed-value>
+                <stored-value>Film | فيلم</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Series</displayed-value>
+                <stored-value>Series | مسلسل</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Biography</displayed-value>
+                <stored-value>Biography | سيرة ذاتية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Workshop</displayed-value>
+                <stored-value>Workshop | ورشة عمل</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Souvenir</displayed-value>
+                <stored-value>Souvenir | هدية تذكارية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>Cartoon Fees</displayed-value>
+                <stored-value>Cartoon Fees | رسوم كرتون</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Atlases</displayed-value>
+                <stored-value>Atlases | أطالس</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>Globes</displayed-value>
+                <stored-value>Globes | كرات أرضية</stored-value>
+            </pair>
+
+        </value-pairs>
 
         <value-pairs value-pairs-name="research_study_common_types" dc-term="type">
             <pair>

@@ -164,7 +164,7 @@
          <dc-element>type</dc-element>
          <dc-qualifier></dc-qualifier>
          <repeatable>true</repeatable>
-         <label>النوع</label>
+         <label>نوع الوثيقة</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>حدد نوع (أنواع) محتوى المادة. لتحديد أكثر من قيمة في القائمة ، قد تضطر إلى الضغط باستمرار على مفتاح "CTRL" أو "Shift".</hint>
          <required></required>
@@ -268,7 +268,7 @@
                     <repeatable>true</repeatable>
                     <style>readonly</style>
                     <label>الباحث</label>
-                    <hint>أدخل اسم الباحث (الالاسم الأخير، الاسم الأول)</hint>
+                    <hint>أدخل اسم الباحث (الاسم الأخير، الاسم الأول)</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -307,9 +307,9 @@
                 <relation-field>
                     <relationship-type>isAdvisorsOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
-                    <repeatable>false</repeatable>
+                    <repeatable>true</repeatable>
                     <label>المشرف</label>
-                    <hint>أدخل اسم المشرف (الالاسم الأخير، الاسم الأول)</hint>
+                    <hint>أدخل اسم المشرف (الاسم الأخير، الاسم الأول)</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -386,7 +386,7 @@
                 <relation-field>
                     <relationship-type>isAdministrationOfPublication</relationship-type>
                     <search-configuration>administration</search-configuration>
-                     <repeatable>true</repeatable>
+                     <repeatable>false</repeatable>
                     <label> اسم القسم</label>
                     <hint> أدخل اسم القسم الخاص بالأطروحة الجامعية، إن وجد</hint>
                     <linked-metadata-field>
@@ -398,6 +398,22 @@
                     <!--<externalsources>pubmed</externalsources>-->
                     
                 </relation-field>
+
+                </row> 
+
+  <row>
+                	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>relation</dc-element>
+         <dc-qualifier>specialization</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>التخصص الدقيق</label>
+         <!-- <input-type>onebox</input-type> -->
+        <input-type value-pairs-name="specialization_list">dropdown</input-type>
+         <hint> أدخل التخصص الدقيق للأطروحة الجامعية، إن وجد. </hint>
+         <required></required>
+       
+	</field>
             </row> 
 
 
@@ -417,20 +433,19 @@
 
 
 
-             <row>
+             <!-- <row>
 	<field>
          <dc-schema>dc</dc-schema>
          <dc-element>relation</dc-element>
          <dc-qualifier>specialization</dc-qualifier>
-         <repeatable>false</repeatable>
+         <repeatable>true</repeatable>
          <label>التخصص الدقيق</label>
-         <!-- <input-type>onebox</input-type> -->
         <input-type value-pairs-name="specialization_list">dropdown</input-type>
          <hint> أدخل التخصص الدقيق للأطروحة الجامعية، إن وجد. </hint>
          <required></required>
        
 	</field>
-	</row>
+	</row> -->
 
 
 
@@ -514,6 +529,22 @@
        
 	</field>
 	</row>
+
+
+            	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>طبيعة المحتوى</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+                    <hint>حدد نوع محتوى المادة
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
 
 
 
@@ -857,6 +888,99 @@
 
   </form>
 
+
+
+
+  <form name="articlePublicationDataStep">
+
+
+ 
+
+	<row>
+                <relation-field>
+                 <relationship-type>isPublisherOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>الناشر</label>
+                    <hint>أدخل اسم ناشر النسخة التي تم تحريرها مسبقًا لهذه المقالة.</hint>
+                       <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                       <dc-element>publisher</dc-element>
+                       <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <!--<externalsources>pubmed</externalsources>-->
+                </relation-field>
+	</row>
+
+    <row>
+                    <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>الدولة</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم دولة نشر هذه المقالة.</hint>
+                    <required></required>
+                </field>
+
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>city</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>المدينة</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم مدينة نشر هذه  المقالة.</hint>
+                    <required></required>
+                </field>
+    </row>
+
+
+             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>تاريخ النشر الميلادي </label>
+                    <style>col-sm-6</style>
+                    <input-type>date</input-type>
+                    <hint>يرجى تقديم تاريخ النشر السابق أو التوزيع العام أدناه. يمكنك ترك اليوم و / أو الشهر إذا لم تكن قابلة للتطبيق.
+                    </hint>
+                    <required>يجب ادخال تاريخ النشر الميلادي</required>
+                </field>
+
+
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label> تاريخ النشر الهجري</label>
+         <style>col-sm-6</style>
+         <input-type>onebox</input-type>
+         <hint>الرجاءتقديم تاريخ الهجري للتوزيع العام أو النشر السابق 
+أعلاه. يمكنك التغاضي عن اليوم و/أو الشهر إذا لم يكونا
+معروفين.</hint>
+         <required> </required>
+       
+	</field>
+
+
+                </row>
+
+
+
+
+
+
+  </form>
+
+
         
         <form name="publicationLinkedDataStep">
 
@@ -866,7 +990,7 @@
                     <relationship-type>isEventOfPublication</relationship-type>
                     <search-configuration>event</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>حدث</label>
+                    <label>الحدث</label>
                     <hint>استيراد حدث أو إدخال اسم حدث</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
@@ -980,8 +1104,8 @@
                     <relationship-type>isPersonOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -1196,13 +1320,14 @@
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>النوع</label>
+                   <label>نوع الوثيقة</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
                     <hint>حدد نوع محتوى المادة.
                     </hint>
                     <required></required>
                 </field>
             </row>
+            
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -1211,9 +1336,7 @@
                     <repeatable>false</repeatable>
                     <label>اللغة</label>
                     <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
-                    <hint>Select the language of the main content of the item. If the language does not appear in the
-                        list, please select 'Other'. If the content does not really have a language (for example, if it
-                        is a dataset or an image) please select 'N/A'.
+                    <hint>حدد اللغة الرئيسية لمحتوى المادة. إذا لم تظهر اللغة في القائمة أعلاه، يرجى تحديد "أخرى". إذا لم يكن للمحتوى لغة فعلية (على سبيل المثال: إذا كان المحتوى عبارة عن حزمة بيانات أو صورة)، يرجى تحديد "غير معروف".
                     </hint>
                     <required></required>
                 </field>
@@ -1288,7 +1411,7 @@
                     <dc-element>type</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>النوع</label>
+                    <label>نوع الوثيقة</label>
                     <input-type value-pairs-name="common_types">dropdown</input-type>
                     <hint>حدد نوع محتوى المادة. لتحديد أكثر من قيمة في القائمة ، قد تضطر إلى الضغط باستمرار على مفتاح "CTRL" أو "Shift".
                     </hint>
@@ -1617,7 +1740,7 @@
                     <dc-element>relation</dc-element>
                     <dc-qualifier>ispartofseries</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>سلسلة / تقرير رقم.</label>
+                    <label>سلسلة / رقم التقرير.</label>
                     <input-type>series</input-type>
                     <hint>أدخل السلسلة والرقم المخصص لهذه المادة من قبل مجتمعك.</hint>
                     <required></required>
@@ -2092,9 +2215,9 @@
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>familyName</dc-element>
-                    <label>الالاسم الأخير</label>
+                    <label>الاسم الأخير</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل الالاسم الأخير للشخص</hint>
+                    <hint>أدخل الاسم الأخير للشخص</hint>
                 </field>
             </row>
             <row>
@@ -2135,9 +2258,9 @@
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>nationality</dc-element>
-                    <label>العرق او الجنسية</label>
+                    <label>الجنسية</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل العرق / الجنسية للشخص</hint>
+                    <hint>أدخل جنسية الشخص</hint>
                 </field>
             </row>
 
@@ -2146,9 +2269,9 @@
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>birthPlace</dc-element>
-                    <label>مكان المولد</label>
+                    <label>محل الميلاد</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل مكان المولد للشخص</hint>
+                    <hint>أدخل محل الميلاد للشخص</hint>
                 </field>
             </row>            
 
@@ -2330,9 +2453,9 @@
     <field>
         <dc-schema>person</dc-schema>
         <dc-element>familyName</dc-element>
-        <label>الالاسم الأخير</label>
+        <label>الاسم الأخير</label>
         <input-type>onebox</input-type>
-        <hint>أدخل الالاسم الأخير للشخص</hint>
+        <hint>أدخل الاسم الأخير للشخص</hint>
     </field>
 </row>
 
@@ -2359,9 +2482,9 @@
     <field>
         <dc-schema>person</dc-schema>
         <dc-element>nationality</dc-element>
-        <label>العرق او الجنسية</label>
+        <label>الجنسية</label>
         <input-type>onebox</input-type>
-        <hint>أدخل العرق / الجنسية للشخص</hint>
+        <hint>أدخل جنسية الشخص</hint>
     </field>
 </row>
 
@@ -2369,9 +2492,9 @@
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>birthPlace</dc-element>
-                    <label>مكان المولد</label>
+                    <label>محل الميلاد</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل مكان المولد للشخص</hint>
+                    <hint>أدخل محل الميلاد للشخص</hint>
                 </field>
             </row>    
 
@@ -2384,7 +2507,7 @@
         <dc-element>birthDate</dc-element>
         <label>تاريخ الميلاد الميلادي</label>
         <input-type>date</input-type>
-        <hint>أدخل تاريخ ميلاد الميلادي الشخص</hint>
+        <hint>أدخل تاريخ ميلاد الشخص بالتقويم الميلادي</hint>
     </field>
 </row>
 
@@ -2395,7 +2518,7 @@
         <dc-qualifier>hijri</dc-qualifier>
         <label>تاريخ الميلاد الهجري</label>
         <input-type>onebox</input-type>
-        <hint>أدخل تاريخ ميلاد الهجري الشخص</hint>
+        <hint>أدخل تاريخ ميلاد الشخص بالتقويم الهجري</hint>
     </field>
 </row>
 <row>
@@ -2404,7 +2527,7 @@
         <dc-element>deathDate</dc-element>
         <label>تاريخ الوفاة الميلادي</label>
         <input-type>date</input-type>
-        <hint>أدخل تاريخ الوفاة الميلادي الشخص</hint>
+        <hint>أدخل تاريخ وفاة الشخص بالتقويم الميلادي</hint>
     </field>
 </row>
 
@@ -2415,7 +2538,7 @@
         <dc-qualifier>hijri</dc-qualifier>
         <label>تاريخ الوفاة الهجري</label>
         <input-type>onebox</input-type>
-        <hint>أدخل تاريخ الوفاة الهجري الشخص</hint>
+        <hint>أدخل تاريخ وفاة الشخص بالتقويم الهجري</hint>
     </field>
 </row>
 
@@ -2628,7 +2751,7 @@
     </relation-field>
 </row> -->
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfAuthor</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -2643,7 +2766,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
            <row>
                 <relation-field>
@@ -3253,12 +3376,12 @@
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
                     <label>مدير الحدث</label>
-                    <hint>أدخل اسم مدير الحدث  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <hint>أدخل اسم مدير الحدث  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>manger</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -3347,8 +3470,8 @@
                     <relationship-type>isPersonOfEvent</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -3364,7 +3487,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfEvent</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -3379,7 +3502,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
 
 	<row>
@@ -3388,12 +3511,12 @@
                     <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
                     <label>مؤسس الحدث</label>
-                    <hint>أدخل اسم مؤسس الحدث  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <hint>أدخل اسم مؤسس الحدث  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -3717,13 +3840,13 @@
                     <relationship-type>isMangerOfActivity</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>مدير الحدث</label>
-                    <hint>أدخل اسم مدير الحدث  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>مدير الفعالية</label>
+                    <hint>أدخل اسم مدير الفعالية  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>manger</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -3812,8 +3935,8 @@
                     <relationship-type>isPersonOfEvent</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -3829,7 +3952,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfActivity</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -3844,7 +3967,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
 
 	<row>
@@ -3853,12 +3976,12 @@
                     <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
                     <label>مؤسس الحدث</label>
-                    <hint>أدخل اسم مؤسس الحدث  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <hint>أدخل اسم مؤسس الحدث  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
                         <dc-qualifier></dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -4255,7 +4378,7 @@
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
                     <label>مدير المشروع</label>
-                    <hint>أدخل اسم مدير المشروع  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <hint>أدخل اسم مدير المشروع  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>project</dc-schema>
                         <dc-element>manger</dc-element>
@@ -4276,7 +4399,7 @@
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
                     <label>منسق المشروع</label>
-                    <hint>أدخل اسم منسق المشروع  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <hint>أدخل اسم منسق المشروع  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>project</dc-schema>
                         <dc-element>coordinator</dc-element>
@@ -4392,8 +4515,8 @@
                     <relationship-type>isPersonOfProject</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -4426,7 +4549,7 @@
 	</row>
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfProject</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -4441,7 +4564,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
 
 
@@ -4807,13 +4930,13 @@
                     <relationship-type>isPersonOfSeries</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -4824,7 +4947,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfSeries</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -4840,7 +4963,7 @@
         <externalsources>pubmed</externalsources>
     </relation-field>
 </row>
-
+ -->
 
 
 
@@ -5393,13 +5516,13 @@
                     <relationship-type>isPersonOfPlace</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -5410,7 +5533,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfPlace</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -5425,7 +5548,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
            <row>
                 <relation-field>
@@ -5735,13 +5858,13 @@
                     <relationship-type>isPersonOfSite</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -5752,7 +5875,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfSite</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -5767,7 +5890,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
            <row>
                 <relation-field>
@@ -6124,97 +6247,7 @@
 
 
 <form name="researchpublicationStep">
-	<row>
-		<field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>type</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <repeatable>true</repeatable>
-                    <label>النوع</label>
-                    <input-type value-pairs-name="research_study_common_types">dropdown</input-type>
-                    <hint>حدد نوع محتوى المادة. لتحديد أكثر من قيمة في القائمة ، قد تضطر إلى الضغط باستمرار على مفتاح "CTRL" أو "Shift".
-                    </hint>
-                    <required></required>
-		</field>
-	</row>
 
-	<row>
-                <relation-field>
-                    <relationship-type>isAuthorOfPublication</relationship-type>
-                    <search-configuration>person</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>المؤلف</label>
-                    <hint>أدخل اسم المؤلف (الالاسم الأخير ، الاسم الأول).</hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>author</dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <externalsources>orcid</externalsources>
-                    <required></required>
-                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
-                         your institution. The below regex requires a comma to be present in the author field.
-                         However, this is disabled by default to support organizations as authors, etc. -->
-                    <!--<regex>\w+(,)+\w+</regex>-->
-                </relation-field>
-	</row>
-
-
-	<row>
-                <relation-field>
-                    <relationship-type>isPersonOfPublication</relationship-type>
-                    <search-configuration>person</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>الشخصيات</label>
-                    <hint>أدخل اسم الشخصية (الالاسم الأخير ، الاسم الأول).</hint>
-                    <linked-metadata-field>
-                        <dc-schema>dc</dc-schema>
-                        <dc-element>contributor</dc-element>
-                        <dc-qualifier>person</dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <externalsources>orcid</externalsources>
-                    <required></required>
-                   
-                </relation-field>
-	</row>
-
-
-                 <row>
-                <relation-field>
-                    <relationship-type>isOrgUnitOfPublication</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>المؤسسة</label>
-                    <hint>قم باستيراد مؤسسة أو أدخل اسم المؤسسة</hint>
-                       <linked-metadata-field>
-                        <dc-schema>organization</dc-schema>
-                        <dc-element>legalName</dc-element>
-                        <dc-qualifier></dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                    <!--<externalsources>pubmed</externalsources>-->
-                </relation-field>
-            </row>
-
-
-
-	<row>
-                <relation-field>
-                 <relationship-type>isJournalIssueOfPublication</relationship-type>
-                    <search-configuration>journalissue</search-configuration>
-                    <repeatable>true</repeatable>
-                    <label>العدد</label>
-                    <hint>قم باستيراد عدد أو أدخل اسم العدد</hint>
-                       <linked-metadata-field>
-                        <dc-schema>publicationissue</dc-schema>
-                        <dc-element>issueNumber</dc-element>
-                        <dc-qualifier></dc-qualifier>
-                        <input-type>onebox</input-type>
-                    </linked-metadata-field>
-                </relation-field>
-	</row>
 
 	<row>
 		<field>
@@ -6241,18 +6274,90 @@
 		</field>
 	</row>
 
+
+
+
+
 	<row>
-		<field>
-                    <dc-schema>dc</dc-schema>
-                    <dc-element>description</dc-element>
-                    <dc-qualifier></dc-qualifier>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الوصف المادي</label>
-                    <input-type>onebox</input-type>
-                    <hint>يرجى إدخال الوصف المادي للمادة.</hint>
+                    <label>المؤلف</label>
+                    <hint>أدخل اسم المؤلف (الاسم الأخير ، الاسم الأول).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
                     <required></required>
-		</field>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
 	</row>
+
+
+	<!-- <row>
+                <relation-field>
+                    <relationship-type>isPersonOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>الشخصيات</label>
+                    <hint>أدخل اسم الشخصية (الاسم الأخير ، الاسم الأول).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>person</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                   
+                </relation-field>
+	</row> -->
+
+
+                 <!-- <row>
+                <relation-field>
+                    <relationship-type>isOrgUnitOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>المؤسسة</label>
+                    <hint>قم باستيراد مؤسسة أو أدخل اسم المؤسسة</hint>
+                       <linked-metadata-field>
+                        <dc-schema>organization</dc-schema>
+                        <dc-element>legalName</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+            </row> -->
+
+
+
+	<row>
+                <relation-field>
+                 <relationship-type>isJournalIssueOfPublication</relationship-type>
+                    <search-configuration>journalissue</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>العدد</label>
+                    <hint>قم باستيراد عدد أو أدخل اسم العدد</hint>
+                       <linked-metadata-field>
+                        <!-- <dc-schema>publicationissue</dc-schema>
+                        <dc-element>issueNumber</dc-element> -->
+                        <dc-schema>journalissue</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row>
+
+
 
 	<row>
 		<field>
@@ -6266,6 +6371,54 @@
                     <required></required>
 		</field>
 	</row>
+
+
+
+    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>نوع الوثيقة</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>حدد نوع المادة</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>نوع المحتوي</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>حدد نوع محتوى المادة
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>الوصف المادي</label>
+                    <input-type>textarea</input-type>
+                    <hint>يرجى إدخال الوصف المادي للمادة.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
 
 	<row>
 		<field>
@@ -6343,7 +6496,7 @@
                     <dc-element>relation</dc-element>
                     <dc-qualifier>ispartofseries</dc-qualifier>
                     <repeatable>true</repeatable>
-                    <label>سلسلة / تقرير رقم.</label>
+                    <label>سلسلة / رقم التقرير.</label>
                     <input-type>series</input-type>
                     <hint>أدخل السلسلة والرقم المخصص لهذه المادة من قبل مجتمعك.</hint>
                     <required></required>
@@ -6399,6 +6552,335 @@
 
 
 </form>
+
+
+<!-- article form -->
+
+<form name="articleStep">
+
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>العنوان</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل العنوان الرئيسي للمادة.</hint>
+                    <required>يجب إدخال عنوان رئيسي لهذا المادة.</required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>title</dc-element>
+                    <dc-qualifier>alternative</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>عناوين أخرى</label>
+                    <input-type>onebox</input-type>
+                    <hint>إذا كان العنصر يحتوي على أي عناوين بديلة ، فيرجى إدخالها هنا.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
+
+	<row>
+                <relation-field>
+                    <relationship-type>isAuthorOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>المؤلف</label>
+                    <hint>أدخل اسم المؤلف (الاسم الأخير ، الاسم الأول).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>author</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                    <!-- You may choose to validate author names via a Regular Expression if it's appropriate for
+                         your institution. The below regex requires a comma to be present in the author field.
+                         However, this is disabled by default to support organizations as authors, etc. -->
+                    <!--<regex>\w+(,)+\w+</regex>-->
+                </relation-field>
+	</row>
+
+
+	<!-- <row>
+                <relation-field>
+                    <relationship-type>isPersonOfPublication</relationship-type>
+                    <search-configuration>person</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>الشخصيات</label>
+                    <hint>أدخل اسم الشخصية (الاسم الأخير ، الاسم الأول).</hint>
+                    <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                        <dc-element>contributor</dc-element>
+                        <dc-qualifier>person</dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <externalsources>orcid</externalsources>
+                    <required></required>
+                   
+                </relation-field>
+	</row> -->
+
+
+                 <!-- <row>
+                <relation-field>
+                    <relationship-type>isOrgUnitOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>المؤسسة</label>
+                    <hint>قم باستيراد مؤسسة أو أدخل اسم المؤسسة</hint>
+                       <linked-metadata-field>
+                        <dc-schema>organization</dc-schema>
+                        <dc-element>legalName</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+            </row> -->
+
+
+
+	<row>
+                <relation-field>
+                 <relationship-type>isJournalIssueOfPublication</relationship-type>
+                    <search-configuration>journalissue</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label>العدد</label>
+                    <hint>قم باستيراد عدد أو أدخل اسم العدد</hint>
+                       <linked-metadata-field>
+                        <dc-schema>journalissue</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                </relation-field>
+	</row>
+
+
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>abstract</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>الملخص</label>
+                    <input-type>textarea</input-type>
+                    <hint>يرجى إدخال ملخص المادة.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>نوع الوثيقة</label>
+                    <input-type value-pairs-name="common_types">dropdown</input-type>
+                    <hint>حدد نوع المادة</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+            	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>طبيعة المحتوى</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+                    <hint>حدد نوع محتوى المادة
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
+
+
+	<!-- <row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>تاريخ النشر</label>
+                    <style>col-sm-4</style>
+                    <input-type>date</input-type>
+                    <hint>
+                   الرجاءتقديم تاريخ التوزيع العام أو النشر السابق أعلاه. يمكنك التغاضي عن اليوم و/أو الشهر إذا لم يكونا معروفين.
+                    </hint>
+                    <required>يجب عليك إدخال السنة على الأقل.</required>
+		</field>
+
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>الناشر</label>
+                    <style>col-sm-8</style>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم ناشر النسخة التي تم تحريرها مسبقًا لهذه المادة.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+	<row>
+		<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label> التاريخ الهجري</label>
+         <input-type>onebox</input-type>
+         <hint>الرجاءتقديم تاريخ الهجري للتوزيع العام أو النشر السابق 
+أعلاه. يمكنك التغاضي عن اليوم و/أو الشهر إذا لم يكونا
+معروفين.</hint>
+         <required> </required>
+       
+		</field>
+	</row> -->
+
+
+           <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>source</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>المصدر</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل المصدر .</hint>
+                    <required></required>
+                </field>
+            </row>
+
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>language</dc-element>
+                    <dc-qualifier>iso</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>اللغة</label>
+                    <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+                    <hint>حدد لغة المحتوى الرئيسي للمادة. إذا لم تظهر اللغة في القائمة ، يرجى تحديد "أخرى". إذا كان المحتوى لا يحتوي على لغة بالفعل (على سبيل المثال ، إذا كان عبارة عن مجموعة بيانات أو صورة) ، فالرجاء تحديد "غير متاح".
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
+
+                <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>رؤوس الموضوعات</label>
+                    <input-type>tag</input-type>
+                    <hint>أدخل رؤوس الموضوعات أو العبارات المناسبة للمادة.</hint>
+                    <required></required>
+                </field>
+	</row>
+
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+
+  <form name="articlePhysicalDescription">
+
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>الوصف المادي</label>
+                    <input-type>textarea</input-type>
+                    <hint>يرجى إدخال الوصف المادي للمادة.</hint>
+                    <required></required>
+		</field>
+	</row>
+
+
+  	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier>citation</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>الاقتباس</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل الاقتباس القياسي النسخة التي تم تحريرها مسبقًا لهذه المادة.</hint>
+                    <required></required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>relation</dc-element>
+                    <dc-qualifier>ispartofseries</dc-qualifier>
+                    <repeatable>true</repeatable>
+                    <label>سلسلة / رقم التقرير.</label>
+                    <input-type>series</input-type>
+                    <hint>أدخل السلسلة والرقم المخصص لهذه المادة من قبل مجتمعك.</hint>
+                    <required></required>
+		</field>
+	</row>
+	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>identifier</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of qualdrop_value MUST be marked as repeatable -->
+                    <repeatable>true</repeatable>
+                    <label>المُعرِفات</label>
+                    <input-type value-pairs-name="common_identifiers">qualdrop_value</input-type>
+                    <hint>إذا كان للمادة أ{قام أو رموز تعريف مرتبطة بها , يرجى إدخال الأنواع والأرقام أو الرموز الفعلية أدناه.
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
+        </form>
+
+
+<!-- article form -->
+
+
 
 
 <!-- sub-orgunit forms kware start -->
@@ -6666,13 +7148,13 @@
                     <relationship-type>isPersonOfAdministration</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -6683,7 +7165,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfAdministration</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -6698,7 +7180,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
            <row>
                 <relation-field>
@@ -6818,7 +7300,7 @@
                 </field>
             </row>
 
-        <row>
+        <!-- <row>
 	<field>
          <dc-schema>dc</dc-schema>
          <dc-element>relation</dc-element>
@@ -6846,18 +7328,18 @@
          <required></required>
        
 	</field>
-</row>
+</row> -->
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
                     <label>الوصف</label>
                     <input-type>textarea</input-type>
-                    <hint>أدخل وصف الوحدة للمؤسسة</hint>
+                    <hint>أدخل الوصف  للمؤسسة</hint>
                 </field>
             </row>
 
-<row>
+<!-- <row>
     <field>
         <dc-schema>organization</dc-schema>
         <dc-element>role</dc-element>
@@ -6877,8 +7359,21 @@
         <hint>أدخل  وصف الدور للمؤسسة</hint>
     </field>
 </row>
-            
-            <row>
+             -->
+     
+
+                      <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <label>العنوان للمؤسسة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل عنوان المؤسسة</hint>
+                </field>
+            </row>
+
+                   <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
@@ -6886,17 +7381,6 @@
                     <label>المدينة</label>
                     <input-type>onebox</input-type>
                     <hint>أدخل مدينة المؤسسة</hint>
-                </field>
-            </row>
-
-                      <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>العنوان</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل عنوان المؤسسة</hint>
                 </field>
             </row>
 
@@ -7086,15 +7570,15 @@
 
 	<row>
                 <relation-field>
-                  <relationship-type>isOrgUnitOfadministration</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                  <relationship-type>isAdministrationOfOrgUnit</relationship-type>
+                    <search-configuration>administration</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>المؤسسة(المؤسسة التابعة لها هذه المؤسسة)</label>
-                    <hint>قم باستيراد مؤسسة أو أدخل اسم المؤسسة</hint>
+                    <label>الإدارة</label>
+                    <hint>قم باستيراد الإدارة أو أدخل اسم الإدارة</hint>
                        <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
-                        <dc-element>relation</dc-element>
-                        <dc-qualifier>ispartof</dc-qualifier>
+                        <dc-element>childLegalName</dc-element>
+                        <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <!--<externalsources>pubmed</externalsources>-->
@@ -7107,13 +7591,13 @@
                     <relationship-type>isPersonOfOrgUnit</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
                         <dc-qualifier>person</dc-qualifier>
-                        <input-type>name</input-type>
+                        <input-type>onebox</input-type>
                     </linked-metadata-field>
                     <externalsources>orcid</externalsources>
                     <required></required>
@@ -7124,7 +7608,7 @@
 
 
 
-<row>
+<!-- <row>
     <relation-field>
         <relationship-type>isPublicationOfOrgUnit</relationship-type>
         <search-configuration>publication</search-configuration>
@@ -7139,7 +7623,7 @@
         </linked-metadata-field>
         <externalsources>pubmed</externalsources>
     </relation-field>
-</row>
+</row> -->
 
            <row>
                 <relation-field>
@@ -7340,9 +7824,9 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>الاسم</label>
+                    <label>العنوان</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل اسم الدورية</hint>
+                    <hint>أدخل عنوان الدورية</hint>
                 </field>
             </row>
 
@@ -7486,6 +7970,36 @@
                     <hint>أدخل ردمد الدورية</hint>
                 </field>
             </row>
+
+
+                        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>frequancy</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>تواتر النشر السابق</label>
+                    <input-type value-pairs-name="common_frequancy">dropdown</input-type>
+                    <hint>حدد نوع تواتر النشر </hint>
+                    
+                    <required></required>
+		</field>
+	</row>
+
+            
+            	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>frequancy</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>تواتر النشر</label>
+                    <input-type value-pairs-name="common_frequancy">dropdown</input-type>
+                    <hint>حدد نوع تواتر النشر </hint>
+                    
+                    <required></required>
+		</field>
+	</row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
@@ -7495,7 +8009,27 @@
                     <hint>أدخل وصف الدورية</hint>
                 </field>
             </row>
-            <row>
+            <!-- <row>
+                <field>
+                    <dc-schema>creativework</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <label>الناشر</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم ناشر الدورية</hint>
+                </field>
+            </row> -->
+
+        </form>
+
+
+
+
+
+<form name="journalPublicationDataStep">
+
+
+ 
+  <row>
                 <field>
                     <dc-schema>creativework</dc-schema>
                     <dc-element>publisher</dc-element>
@@ -7504,8 +8038,75 @@
                     <hint>أدخل اسم ناشر الدورية</hint>
                 </field>
             </row>
+    <row>
+                    <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>country</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>الدولة</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم دولة نشر هذه الدورية.</hint>
+                    <required></required>
+                </field>
 
-        </form>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>publisher</dc-element>
+                    <dc-qualifier>city</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>المدينة</label>
+                    <style>col-sm-6</style>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل اسم مدينة نشر هذه  الدورية.</hint>
+                    <required></required>
+                </field>
+    </row>
+
+
+             <row>
+                <field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>date</dc-element>
+                    <dc-qualifier>issued</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>تاريخ النشر الميلادي </label>
+                    <style>col-sm-6</style>
+                    <input-type>date</input-type>
+                    <hint>يرجى تقديم تاريخ النشر السابق أو التوزيع العام أدناه. يمكنك ترك اليوم و / أو الشهر إذا لم تكن قابلة للتطبيق.
+                    </hint>
+                    <required></required>
+                </field>
+
+
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label> تاريخ النشر الهجري</label>
+         <style>col-sm-6</style>
+         <input-type>onebox</input-type>
+         <hint>الرجاءتقديم تاريخ الهجري للتوزيع العام أو النشر السابق 
+أعلاه. يمكنك التغاضي عن اليوم و/أو الشهر إذا لم يكونا
+معروفين.</hint>
+         <required> </required>
+       
+	</field>
+
+
+                </row>
+
+
+
+
+
+
+  </form>
+
+
+
 
         <!-- Form which defines the metadata page/section for depositing JournalVolume Entities -->
         <form name="journalVolumeStep">
@@ -7517,6 +8118,12 @@
                     <!--<filter>creativework.publisher:somepublishername</filter>-->
                     <label>الدورية</label>
                     <hint>حدد الدورية المتعلقة بهذا المجلد.</hint>
+                        <linked-metadata-field>
+                        <dc-schema>journal</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
                     <externalsources>sherpaJournal</externalsources>
                 </relation-field>
             </row>
@@ -7524,9 +8131,9 @@
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>الاسم</label>
+                    <label>العنوان</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل اسم مجلد الدورية</hint>
+                    <hint>أدخل عنوان مجلد الدورية</hint>
                 </field>
             </row>
             <row>
@@ -7566,15 +8173,21 @@
                     <search-configuration>journalvolume</search-configuration>
                     <label>مجلد الدورية</label>
                     <hint>حدد مجلد الدورية المتعلق بهذه العدد.</hint>
+                        <linked-metadata-field>
+                        <dc-schema>journalvolume</dc-schema>
+                        <dc-element>title</dc-element>
+                        <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
                 </relation-field>
             </row>
             <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>title</dc-element>
-                    <label>الاسم</label>
+                    <label>العنوان</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل اسم عدد الدورية</hint>
+                    <hint>أدخل عنوان عدد الدورية</hint>
                 </field>
             </row>
             <row>
@@ -7587,7 +8200,23 @@
                 </field>
             </row>
 
-            	<row>
+
+                   <row>
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>language</dc-element>
+         <dc-qualifier>iso</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>اللغة</label>
+         <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
+         <hint>حدد لغة المحتوى الرئيسي للمادة. إذا لم تظهر اللغة في القائمة أدناه ، يرجى تحديد "أخرى". إذا كان المحتوى لا يحتوي على لغة بالفعل (على سبيل المثال ، إذا كان عبارة عن مجموعة بيانات أو صورة) ، فيرجى تحديد "غير متاح".</hint>
+         <required></required>
+       </field>
+	</row>
+
+
+
+            	<!-- <row>
 		<field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>description</dc-element>
@@ -7599,7 +8228,7 @@
                     
                     <required></required>
 		</field>
-	</row>
+	</row> -->
             <row>
                 <field>
                     <dc-schema>creativework</dc-schema>
@@ -7609,6 +8238,23 @@
                     <hint>أدخل تاريخ نشر عدد الدورية</hint>
                 </field>
             </row>
+
+
+               <row>
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>date</dc-element>
+         <dc-qualifier>issuedhijri</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label> التاريخ النشر الهجري</label>
+         <input-type>onebox</input-type>
+         <hint>الرجاءتقديم تاريخ الهجري للتوزيع العام أو النشر السابق 
+أعلاه. يمكنك التغاضي عن اليوم و/أو الشهر إذا لم يكونا
+معروفين.</hint>
+         <required> </required>
+       
+	</field>
+	</row>
 
                         <row>
                 <field>
@@ -7641,16 +8287,20 @@
                     <hint>أدخل جدول المحتويات عدد الدورية</hint>
                 </field>
             </row>
-            <row>
+                   <row>
                 <field>
-                    <dc-schema>creativework</dc-schema>
-                    <dc-element>keywords</dc-element>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>subject</dc-element>
+                    <dc-qualifier></dc-qualifier>
+                    <!-- An input-type of tag MUST be marked as repeatable -->
                     <repeatable>true</repeatable>
-                    <label>الكلمات الرئيسية</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل الكلمات الرئيسية لعدد الدورية</hint>
+                     <label>الكلمات الرئيسية</label>
+                    <input-type>tag</input-type>
+                  <hint>أدخل الكلمات الرئيسية لعدد الدورية</hint>
+                    <required></required>
+                    <vocabulary>srsc</vocabulary>
                 </field>
-            </row>
+	</row>
 
         </form>
 
@@ -8308,7 +8958,7 @@
                     <relationship-type>isOrgUnitOfPublication</relationship-type>
                     <search-configuration>orgunit</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>المكتبة التابعة لها</label>
+                    <label>اسم المكتبة التابعة لها المخطوطة</label>
                     <hint>استيراد المكتبة التابعة له أو إدخال اسم المكتبة التابعة له</hint>
                        <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
@@ -8433,12 +9083,28 @@
          <dc-element>type</dc-element>
          <dc-qualifier></dc-qualifier>
          <repeatable>true</repeatable>
-         <label>النوع</label>
+         <label>نوع الوثيقة</label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>حدد نوع (أنواع) محتوى المادة. لتحديد أكثر من قيمة في القائمة ، قد تضطر إلى الضغط باستمرار على مفتاح "CTRL" أو "Shift".</hint>
          <required></required>
        </field>
 	</row>
+
+
+            	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>طبيعة المحتوى</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+                    <hint>حدد نوع محتوى المادة
+                    </hint>
+                    <required></required>
+		</field>
+	</row>
+
 
 
    <row>
@@ -9011,8 +9677,8 @@
                     <relationship-type>isPersonOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>الأشخاص</label>
-                    <hint>أدخل اسم الأشخاص  (الالاسم الأخير ، الاسم الأول).</hint>
+                    <label>الشخص</label>
+                    <hint>أدخل اسم الشخص  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>dc</dc-schema>
                         <dc-element>contributor</dc-element>
@@ -9117,6 +9783,143 @@
 
             
           
+        </value-pairs>
+
+
+        <value-pairs value-pairs-name="content_types" dc-term="type">
+           
+            <pair>
+                <displayed-value>بحث</displayed-value>
+                <stored-value>Research | بحث</stored-value>
+            </pair>
+
+                 <pair>
+                <displayed-value>تقرير</displayed-value>
+                <stored-value>Report | تقرير </stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>دراسة</displayed-value>
+                <stored-value>Study | دراسة </stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>ورقة عمل</displayed-value>
+                <stored-value>Working Paper | ورقة عمل</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>خطة أو مخطط</displayed-value>
+                <stored-value>Plan or blueprint | خطة أو مخطط</stored-value>
+            </pair>
+
+
+            <pair>
+                <displayed-value>حوار</displayed-value>
+                <stored-value>Dialogue | حوار</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>مقابلة</displayed-value>
+                <stored-value>Interview | مقابلة</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>ندوة</displayed-value>
+                <stored-value>Seminar | ندوة</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>أطروحة مؤتمر</displayed-value>
+                <stored-value>Conference Thesis | أطروحة مؤتمر</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>احصائيات</displayed-value>
+                <stored-value>Statistics | احصائيات</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>حدث</displayed-value>
+                <stored-value>Event | حدث</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>رواية</displayed-value>
+                <stored-value>Novel | رواية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>قصة</displayed-value>
+                <stored-value>Story | قصة</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>مسرحية</displayed-value>
+                <stored-value>Play | مسرحية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>شعر</displayed-value>
+                <stored-value>Poetry | شعر</stored-value>
+            </pair>
+
+
+             <pair>
+                <displayed-value>خطب</displayed-value>
+                <stored-value>Speeches | خطب</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>معاهدات</displayed-value>
+                <stored-value>Treaties | معاهدات</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>تشريع</displayed-value>
+                <stored-value>Legislation | تشريع</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>فيلم</displayed-value>
+                <stored-value>Film | فيلم</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>مسلسل</displayed-value>
+                <stored-value>Series | مسلسل</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>سيرة ذاتية</displayed-value>
+                <stored-value>Biography | سيرة ذاتية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>ورشة عمل</displayed-value>
+                <stored-value>Workshop | ورشة عمل</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>هدية تذكارية</displayed-value>
+                <stored-value>Souvenir | هدية تذكارية</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>رسوم كرتون</displayed-value>
+                <stored-value>Cartoon Fees | رسوم كرتون</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>أطالس</displayed-value>
+                <stored-value>Atlases | أطالس</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>كرات أرضية</displayed-value>
+                <stored-value>Globes | كرات أرضية</stored-value>
+            </pair>
+
         </value-pairs>
 
 
@@ -9268,7 +10071,48 @@
             
         </value-pairs>
 
- <value-pairs value-pairs-name="media_types" dc-term="type">
+        <value-pairs value-pairs-name="media_types" dc-term="type">
+           
+            <pair>
+                <displayed-value>نص</displayed-value>
+                <stored-value>Text |  نص</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>صورة</displayed-value>
+                <stored-value>Image | صورة</stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>فيديو</displayed-value>
+                <stored-value>Video | فيديو</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>صوت</displayed-value>
+                <stored-value>Sound | صوت</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>صورة بثلاث أبعاد</displayed-value>
+                <stored-value>3D Image | صورة بثلاث أبعاد</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>واقع افتراضي</displayed-value>
+                <stored-value>Virtual Reality | واقع افتراضي</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>واقع مُعزّز</displayed-value>
+                <stored-value>Augumented Reality | واقع مُعزّز</stored-value>
+            </pair>
+
+          
+               
+        </value-pairs>
+
+ <!-- <value-pairs value-pairs-name="media_types" dc-term="type">
            
             <pair>
                 <displayed-value>نص</displayed-value>
@@ -9295,7 +10139,7 @@
                 <stored-value>Video | فيديو</stored-value>
             </pair>
                
-        </value-pairs>
+        </value-pairs> -->
 
                 <value-pairs value-pairs-name="uses_types" dc-term="type">
            
@@ -9585,8 +10429,19 @@
             </pair>
 
              <pair>
+                <displayed-value>بحث تكميلي لنيل درجة الماجستير</displayed-value>
+                <stored-value>Complementary research to obtain a master's degree | بحث تكميلي لنيل درجة الماجستير</stored-value>
+            </pair>
+
+
+             <pair>
                 <displayed-value>اطروحة دكتوراه</displayed-value>
                 <stored-value>Phd Dissertation | اطروحة دكتوراه</stored-value>
+            </pair>
+
+               <pair>
+                <displayed-value>دبلوم عالي</displayed-value>
+                <stored-value>Higher Diploma | دبلوم عالي</stored-value>
             </pair>
 
             <pair>
@@ -9795,23 +10650,23 @@
 
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
             <pair>
-                <displayed-value>ISSN</displayed-value>
+                <displayed-value>ردمد</displayed-value>
                 <stored-value>issn</stored-value>
             </pair>
              <pair>
-                <displayed-value>Save Number</displayed-value>
+                <displayed-value>رقم الحفظ المحلي</displayed-value>
                 <stored-value>saveNumber</stored-value>
             </pair>
             <pair>
-                <displayed-value>Other</displayed-value>
+                <displayed-value>أخرى</displayed-value>
                 <stored-value>other</stored-value>
             </pair>
             <pair>
-                <displayed-value>ISMN</displayed-value>
+                <displayed-value>الرقم القياسي الدولي للموسيقى</displayed-value>
                 <stored-value>ismn</stored-value>
             </pair>
             <pair>
-                <displayed-value>Gov't Doc #</displayed-value>
+                <displayed-value>رقم الوثيقة الحكومية</displayed-value>
                 <stored-value>govdoc</stored-value>
             </pair>
             <pair>
@@ -9819,16 +10674,16 @@
                 <stored-value>uri</stored-value>
             </pair>
               <pair>
-                <displayed-value>DOI</displayed-value>
+                <displayed-value>معرِّف الكائن الرقمي</displayed-value>
                 <stored-value>doi</stored-value>
             </pair>
             <pair>
-                <displayed-value>ISBN</displayed-value>
+                <displayed-value>ردمك</displayed-value>
                 <stored-value>isbn</stored-value>
             </pair>
 
             <pair>
-                <displayed-value>DDC</displayed-value>
+                <displayed-value>تصنيف ديوي العشري</displayed-value>
                 <stored-value>ddc</stored-value>
             </pair>
         </value-pairs>
@@ -9894,8 +10749,8 @@
             </pair>
 
              <pair>
-                <displayed-value>مبتدئ</displayed-value>
-                <stored-value>Jr. | مبتدئ</stored-value>
+                <displayed-value>الابن</displayed-value>
+                <stored-value>Jr. | الابن</stored-value>
             </pair>
 
 
@@ -9917,13 +10772,13 @@
 
 
             <pair>
-                <displayed-value>السادة (جمع السيد)</displayed-value>
+                <displayed-value>السادة</displayed-value>
                 <stored-value>Messrs. | السادة</stored-value>
             </pair>
 
 
             <pair>
-                <displayed-value>السيدات. (جمع السيدة)</displayed-value>
+                <displayed-value>السيدات</displayed-value>
                 <stored-value> Mmes. | السيدات</stored-value>
             </pair>
 
@@ -9940,6 +10795,18 @@
             <pair>
                 <displayed-value>استاذ دكتور</displayed-value>
                 <stored-value>Prof. Dr. | استاذ دكتور</stored-value>
+            </pair>
+
+            
+              <pair>
+                <displayed-value>الشيخ</displayed-value>
+                <stored-value>Sheikh | الشيخ</stored-value>
+               </pair>
+
+
+              <pair>
+                <displayed-value>الداعية</displayed-value>
+                <stored-value>Preacher | الداعية</stored-value>
             </pair>
 
 
@@ -10432,7 +11299,109 @@
 
             </value-pairs>
 
-        <value-pairs value-pairs-name="common_types" dc-term="type">
+
+                    <value-pairs value-pairs-name="common_types" dc-term="type">
+
+                    <pair>
+                <displayed-value>مقال</displayed-value>
+                <stored-value>Article | مقال</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>كتاب</displayed-value>
+                <stored-value>Book | كتاب</stored-value>
+            </pair>
+             <pair>
+                <displayed-value>مخطوطة</displayed-value>
+                <stored-value>Manuscript | مخطوطة</stored-value>
+            </pair>
+
+                 <pair>
+                <displayed-value>رسالة جامعية</displayed-value>
+                <stored-value>University Dissertations | رسالة جامعية</stored-value>
+            </pair>
+
+               <pair>
+                <displayed-value>عرض تقديمي</displayed-value>
+                <stored-value>Presentation | عرض تقديمي</stored-value>
+            </pair>
+            
+            <pair>
+                <displayed-value>بيانات</displayed-value>
+                <stored-value>Dataset | بيانات</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>نموذج ما قبل الطباعة</displayed-value>
+                <stored-value>Preprint | نموذج ما قبل الطباعة</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>تسجيل شفوي</displayed-value>
+                <stored-value>Recording oral | تسجيل شفوي</stored-value>
+            </pair>
+
+             <pair>
+                <displayed-value>برمجيات</displayed-value>
+                <stored-value>Software | برمجيات</stored-value>
+            </pair>
+
+
+            <pair>
+                <displayed-value>كتاب إلكتروني</displayed-value>
+                <stored-value>E-Book | كتاب إلكتروني</stored-value>
+            </pair>
+          <pair>
+                <displayed-value>نوتة موسيقية</displayed-value>
+                <stored-value>Musical Score | نوتة موسيقية</stored-value>
+            </pair>
+
+
+             <pair>
+                <displayed-value>خريطة</displayed-value>
+                <stored-value>Map | خريطة</stored-value>
+            </pair>
+            
+              <pair>
+                <displayed-value>كتاب نادر</displayed-value>
+                <stored-value>Rare Book | كتاب نادر</stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>مقتنى ثمين</displayed-value>
+                <stored-value>Precious Possession | مقتنى ثمين</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>فيلم مصغر</displayed-value>
+                <stored-value>Microfilm | فيلم مصغر</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>قرص مضغوط</displayed-value>
+                <stored-value>Compact Disc | قرص مضغوط</stored-value>
+            </pair>
+
+            <pair>
+                <displayed-value>شريط (كاسيت)</displayed-value>
+                <stored-value>Cassette Tape | شريط (كاسيت)</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>صحيفة ورقية</displayed-value>
+                <stored-value>Newspaper | صحيفة ورقية</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>لوحة فنية</displayed-value>
+                <stored-value>Painting | لوحة فنية</stored-value>
+            </pair>
+            <pair>
+                <displayed-value>آثار قديمة</displayed-value>
+                <stored-value>Ancient Relics | آثار قديمة</stored-value>
+            </pair>
+
+
+
+        </value-pairs>
+
+        <!-- <value-pairs value-pairs-name="common_types" dc-term="type">
             <pair>
                 <displayed-value>صور متحركة</displayed-value>
                 <stored-value>Animation | صور متحركة</stored-value>
@@ -10555,7 +11524,7 @@
                 <displayed-value>أخرى</displayed-value>
                 <stored-value>Other | أخرى</stored-value>
             </pair>
-        </value-pairs>
+        </value-pairs> -->
 
         <!-- default language order: (from dspace 1.2.1)
              "en_US", "en", "es", "de", "fr", "it", "ja", "zh", "other", ""
@@ -10566,10 +11535,7 @@
                 <stored-value>Arabic | العربية</stored-value>
             </pair>
         
-            <pair>
-                <displayed-value>غير محدد</displayed-value>
-                <stored-value></stored-value>
-            </pair>
+          
             <pair>
                 <displayed-value>الإنجليزية (الولايات المتحدة)</displayed-value>
                 <stored-value>English | الإنجليزية</stored-value>
@@ -10613,6 +11579,11 @@
             <pair>
                 <displayed-value>(أخرى)</displayed-value>
                 <stored-value>Other | أخرى</stored-value>
+            </pair>
+
+              <pair>
+                <displayed-value>غير محدد</displayed-value>
+                <stored-value></stored-value>
             </pair>
         </value-pairs>
 

@@ -2817,11 +2817,11 @@
 
   "relationships.add.error.title": "Unable to add relationship",
 
-  "relationships.isAuthorOf": "Authors",
+  "relationships.isAuthorOf": "Authors/Researchers",
 
-  "relationships.isAuthorOf.Person": "Authors (persons)",
+  "relationships.isAuthorOf.Person": "Authors/Researchers (persons)",
 
-  "relationships.isAuthorOf.OrgUnit": "Authors (organizational units)",
+  "relationships.isAuthorOf.OrgUnit": "Authors/Researchers (organizational units)",
 
   "relationships.isIssueOf": "Journal Issues",
 
@@ -2831,7 +2831,7 @@
 
   "relationships.isOrgUnitOf": "Organizational Units",
 
-  "relationships.isPersonOf": "Authors",
+  "relationships.isPersonOf": "Authors/Researchers",
 
   "relationships.isProjectOf": "Research Projects",
 
@@ -2855,9 +2855,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title.prefix": "Digital Repository at Najran University  ::",
+  "repository.title.prefix": "Digital Repository at Imam Mohammad Ibn Saud Islamic University  ::",
 
-  "repository.title.prefixDSpace": "Digital Repository at Najran University  ::",
+  "repository.title.prefixDSpace": "Digital Repository at Imam Mohammad Ibn Saud Islamic University  ::",
 
   "resource-policies.add.button": "Add",
 
@@ -3491,14 +3491,14 @@
 
   "submission.sections.describe.relationship-lookup.selected": "Selected {{ size }} items",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "Local Authors ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "Local Authors/Researchers ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfPublication": "Local Journals ({{ count }})",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Project": "Local Projects ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Publication": "Local Publications ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "Local Authors ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "Local Authors/Researchers ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.OrgUnit": "Local Organizational Units ({{ count }})",
 
@@ -3558,7 +3558,7 @@
 
   "submission.sections.describe.relationship-lookup.title.isJournalOfPublication": "Journals",
 
-  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors",
+  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "Funding Agency",
   "submission.sections.describe.relationship-lookup.title.Project": "Projects",
@@ -3585,7 +3585,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.no-selection": "Your selection is currently empty.",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "Selected Authors",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "Selected Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isJournalOfPublication": "Selected Journals",
 
@@ -3594,7 +3594,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.Publication": "Selected Publications",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "Selected Authors",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "Selected Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.OrgUnit": "Selected Organizational Units",
 
@@ -3682,7 +3682,7 @@
 
   "submission.sections.submit.progressbar.describe.stepcustom": "Describe",
 
-  "submission.sections.submit.progressbar.describe.stepone": "Describe",
+  "submission.sections.submit.progressbar.describe.stepone": "Basic description",
 
   "submission.sections.submit.progressbar.uniDescribe.stepone": "Physical Description",
 
@@ -3698,7 +3698,7 @@
 
    "submission.sections.submit.progressbar.manuscriptObjectiveDescribe.stepone":"Objective term",
 
-  "submission.sections.submit.progressbar.describe.steptwo": "Describe",
+  "submission.sections.submit.progressbar.describe.steptwo": "Additional description",
 
   "submission.sections.submit.progressbar.detect-duplicate": "Potential duplicates",
 
@@ -4615,14 +4615,14 @@
 
   "submission.sections.describe.relationship-lookup.selected": "Selected {{ size }} items",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "Local Authors ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.isAuthorOfPublication": "Local Authors/Researchers ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.isJournalOfPublication": "Local Journals ({{ count }})",
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Project": "Local Projects ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.Publication": "Local Publications ({{ count }})",
 
-  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "Local Authors ({{ count }})",
+  "submission.sections.describe.relationship-lookup.search-tab.tab-title.Person": "Local Authors/Researchers ({{ count }})",
 
   "submission.sections.describe.relationship-lookup.search-tab.tab-title.OrgUnit": "Local Organizational Units ({{ count }})",
 
@@ -4685,7 +4685,7 @@
 
   "submission.sections.describe.relationship-lookup.title.isJournalOfPublication": "Journals",
 
-  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors",
+  "submission.sections.describe.relationship-lookup.title.isAuthorOfPublication": "Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.title.isFundingAgencyOfPublication": "Funding Agency",
   "submission.sections.describe.relationship-lookup.title.Project": "Projects",
@@ -4712,7 +4712,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.no-selection": "Your selection is currently empty.",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "Selected Authors",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.isAuthorOfPublication": "Selected Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.isJournalOfPublication": "Selected Journals",
 
@@ -4721,7 +4721,7 @@
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.Publication": "Selected Publications",
 
-  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "Selected Authors",
+  "submission.sections.describe.relationship-lookup.selection-tab.title.Person": "Selected Authors/Researchers",
 
   "submission.sections.describe.relationship-lookup.selection-tab.title.OrgUnit": "Selected Organizational Units",
 
@@ -4939,7 +4939,7 @@
 
   "process.detail.delete.error": "Something went wrong when deleting the process",
 
-  'journalissue.page.frequancy':" Publishing frequency",
+  'journalissue.page.frequancy':"Current publishing frequency",
 
 
     "search.filters.filter.frequancy.head": "Journal issue publishing frequency",
@@ -5638,8 +5638,8 @@
 "submission.sections.describe.relationship-lookup.search-tab.tab-title.isActivityOfPublication":"Local Activities ({{ count }})",
 
 
-'submission.sections.describe.relationship-lookup.title.isAdministrationOfPublication':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPublication':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfPublication':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPublication':'Local Administrations ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isPlaceOfPublication':'Places',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPlaceOfPublication':'Local Places ({{ count }})',
@@ -5657,8 +5657,8 @@
 'submission.sections.describe.relationship-lookup.title.isSeriesOfPublication':'Series',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isSeriesOfPublication':'Local Series ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isAdministrationOfPublication':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPublication':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfPublication':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfPublication':'Local Administrations ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isDiscussionOfPublication':'Members of the discussion and arbitration committee',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isDiscussionOfPublication':'Local Members of the discussion and arbitration committee ({{ count }})',
@@ -5743,8 +5743,8 @@
 'submission.sections.describe.relationship-lookup.title.isPublicationOfSite':'Publications',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfSite':'Local Publications ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isAdministrationOfSite':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfSite':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfSite':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfSite':'Local Administrations ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfSite':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfSite':'Local Organizational Units ({{ count }})',
@@ -5764,8 +5764,8 @@
 'submission.sections.describe.relationship-lookup.title.isPublicationOfActivity':'Publications',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isPublicationOfActivity':'Local Publications ({{ count }})',
 
-'submission.sections.describe.relationship-lookup.title.isAdministrationOfActivity':'Sub-Organizational Unit',
-'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfActivity':'Local Sub-Organizational Units ({{ count }})',
+'submission.sections.describe.relationship-lookup.title.isAdministrationOfActivity':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfActivity':'Local Administrations ({{ count }})',
 
 'submission.sections.describe.relationship-lookup.title.isOrgUnitOfActivity':'Organizational Unit',
 'submission.sections.describe.relationship-lookup.search-tab.tab-title.isOrgUnitOfActivity':'Local Organizational Units ({{ count }})',
@@ -6086,6 +6086,41 @@
   "profile.security.form.label.current-password": "Current password",
 
   'suborgunit-previous-label':'(previously)',
+
+  'entity.add':'Add',
+
+    'organization.page.website':'Contact link',
+
+   'page.page.fax':'Fax number',
+
+    "admin.registries.bitstream-formats.table.id" : "ID",
+    "admin.registries.schema.fields.table.id" : "ID",
+    "sorting.person.familyName.ASC":"Surname Ascending",
+    "sorting.person.givenName.ASC":"Name Ascending",
+    "sorting.person.birthDate.DESC":"Birth Date Descending",
+
+
+     'search.filters.filter.content.head':'Content Type',
+ 'search.filters.filter.content.label':'Search content type ',
+ 'search.filters.filter.content.placeholder':'Content Type',
+  "search.filters.applied.f.content":"Content Type",
+
+  'item.page.content':'Content type',
+
+  'journalissue.page.oldFrequancy':'Previous publishing frequency',
+
+  'new.name.variant':'New name variant',
+
+  'submission.sections.describe.relationship-lookup.selection-tab.title.isAdministrationOfPublication':'Selected administrations',
+
+ 'submission.sections.describe.relationship-lookup.selection-tab.title.isPersonOfPublication':'Selected persons',
+
+ 'statistics.table.header':'Views',
+
+
+ 'submission.sections.describe.relationship-lookup.title.isAdministrationOfOrgUnit':'Administration',
+'submission.sections.describe.relationship-lookup.search-tab.tab-title.isAdministrationOfOrgUnit':'Local Administrations ({{ count }})',
+
 }
 
 
