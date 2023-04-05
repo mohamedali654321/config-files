@@ -567,6 +567,24 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
 
 
+
+                    	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Content Type</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+                    <hint>Specify the content type of the item</hint>
+                    
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
          <row>
 	<field>
          <dc-schema>dc</dc-schema>
@@ -810,7 +828,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                     <input-type>date</input-type>
                     <hint>Please provide the date of previous publication or general distribution below. You can leave out the day and/or month if it is not applicable.
                     </hint>
-                    <required></required>
+                    <required>you must enter gregorian publication date </required>
                 </field>
 
                	<field>
@@ -2775,7 +2793,7 @@ known.</hint>
                 <field>
                     <dc-schema>person</dc-schema>
                     <dc-element>jobTitle</dc-element>
-                    <label>Role</label>
+                    <label>Job title</label>
                     <input-type value-pairs-name="roles_names">dropdown</input-type>
                     <hint>Select the job title of the person</hint>
                 </field>
@@ -2787,7 +2805,7 @@ known.</hint>
                     <dc-schema>person</dc-schema>
                     <dc-element>jobTitle</dc-element>
                     <dc-qualifier>description</dc-qualifier>
-                    <label>Description role</label>
+                    <label>Description job title</label>
                     <input-type>textarea</input-type>
                     <hint>Enter the job title description of the person</hint>
                 </field>
@@ -3988,8 +4006,8 @@ known.</hint>
                      <relationship-type>isOrgUnitOfAdministration</relationship-type>
                     <search-configuration>orgunit</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Parent organization(the organization to which this organization is affiliated)</label>
-                    <hint>Enter the parent organization to which the organization belongs.</hint>
+                    <label>Organization(the organization to which this administration is affiliated)</label>
+                    <hint>Enter the parent organization to which the administration belongs.</hint>
                     <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
                          <dc-element>relation</dc-element>
@@ -7826,8 +7844,8 @@ known.</hint>
                     <repeatable>false</repeatable>
                     <label>ContentType</label>
                     <input-type value-pairs-name="content_types">dropdown</input-type>
-<hint>Specify the content type of the item. </hint>            
-        <required></required>
+                    <hint>Specify the content type of the item. </hint>            
+                   <required></required>
 		</field>
 	</row>
 
@@ -8167,7 +8185,22 @@ known.</hint>
                     <repeatable>false</repeatable>
                     <label>Previous publishing frequency</label>
                     <input-type value-pairs-name="common_frequancy">dropdown</input-type>
-                    <hint>Select the type of publishing frequency </hint>
+                    <hint>Select the type of previous publishing frequency </hint>
+                    
+                    <required></required>
+		</field>
+	</row>
+
+
+                                        	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>description</dc-element>
+                    <dc-qualifier>frequancy</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Current publishing frequency</label>
+                    <input-type value-pairs-name="common_frequancy">dropdown</input-type>
+                    <hint>Select the type of current publishing frequency </hint>
                     
                     <required></required>
 		</field>
@@ -9021,7 +9054,41 @@ known.</hint>
      	</field>
    </row> -->
 
-    <row>
+   
+
+ <row>
+	 <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier></dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Manuscript title</label>
+         <input-type>onebox</input-type>
+          <hint> The title should be followed by the general nomenclature of the item [manuscript] in square brackets.</hint>
+         <required>You must enter title of manuscript</required>
+       
+    	</field>
+</row>
+
+
+
+<row>
+	<field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>title</dc-element>
+         <dc-qualifier>alternative</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Manuscript subtitle (other titles)</label>
+         <input-type>onebox</input-type>
+          <hint> Enter the varying title of the manuscript.</hint>
+         <required></required>
+       
+	</field>
+	</row>
+
+
+
+     <row>
                 <relation-field>
                     <relationship-type>isAuthorOfPublication</relationship-type>
                     <search-configuration>person</search-configuration>
@@ -9089,36 +9156,6 @@ known.</hint>
        </field>
 	</row>
 
- <row>
-	 <field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>title</dc-element>
-         <dc-qualifier></dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Manuscript title</label>
-         <input-type>onebox</input-type>
-          <hint> The title should be followed by the general nomenclature of the item [manuscript] in square brackets.</hint>
-         <required></required>
-       
-    	</field>
-</row>
-
-
-
-<row>
-	<field>
-         <dc-schema>dc</dc-schema>
-         <dc-element>title</dc-element>
-         <dc-qualifier>alternative</dc-qualifier>
-         <repeatable>false</repeatable>
-         <label>Manuscript subtitle (other titles)</label>
-         <input-type>onebox</input-type>
-          <hint> Enter the varying title of the manuscript.</hint>
-         <required></required>
-       
-	</field>
-	</row>
-
 
 
 
@@ -9162,7 +9199,7 @@ known.</hint>
 
 
 
-
+<!-- 
     <row>
         <field>
          <dc-schema>dc</dc-schema>
@@ -9175,7 +9212,27 @@ known.</hint>
          <required></required>
        
      	</field>
-   </row>
+   </row> -->
+
+
+
+   	<row>
+                <relation-field>
+                 <relationship-type>isPublisherOfPublication</relationship-type>
+                    <search-configuration>orgunit</search-configuration>
+                    <repeatable>true</repeatable>
+                    <label> Publisher </label>
+                  <hint> Enter the name of the publisher of the issued instance of this manuscript.</hint>
+                       <linked-metadata-field>
+                        <dc-schema>dc</dc-schema>
+                       <dc-element>publisher</dc-element>
+                       <dc-qualifier></dc-qualifier>
+                        <input-type>onebox</input-type>
+                    </linked-metadata-field>
+                    <!--<externalsources>pubmed</externalsources>-->
+                </relation-field>
+	</row>
+
 
 
  <row>
@@ -9189,7 +9246,7 @@ known.</hint>
                     <input-type>date</input-type>
                     <hint>Please give the date of previous publication or public distribution below.You can leave out the day and/or month if they aren't applicable.
                     </hint>
-                    <required></required>
+                    <required>You must enter publishing date</required>
                 </field>
 
                 <field>
@@ -9256,13 +9313,45 @@ known.</hint>
          <dc-schema>dc</dc-schema>
          <dc-element>type</dc-element>
          <dc-qualifier></dc-qualifier>
-         <repeatable>true</repeatable>
+         <repeatable>false</repeatable>
          <label>Type </label>
          <input-type value-pairs-name="common_types">dropdown</input-type>
          <hint>Select the type(s) of content of the item. To select more than one value in the list, you may have to hold down the "CTRL" or "Shift" key.</hint>
          <required></required>
        </field>
 	</row>
+
+
+                	<row>
+		<field>
+                    <dc-schema>dc</dc-schema>
+                    <dc-element>type</dc-element>
+                    <dc-qualifier>content</dc-qualifier>
+                    <repeatable>false</repeatable>
+                    <label>Content Type</label>
+                    <input-type value-pairs-name="content_types">dropdown</input-type>
+                    <hint>Specify the content type of the item</hint>
+                    
+                    <required></required>
+		</field>
+	</row>
+
+
+
+
+                <row>
+        <field>
+         <dc-schema>dc</dc-schema>
+         <dc-element>identifier</dc-element>
+         <dc-qualifier>ddc</dc-qualifier>
+         <repeatable>false</repeatable>
+         <label>Dewey Decimal Classification (DDC)</label>
+         <input-type>onebox</input-type>
+         <hint> Enter Dewey Decimal Classification for the manuscript below.</hint>
+         <required></required>
+       
+     	</field>
+   </row>
 
 
     <row>
@@ -9285,23 +9374,16 @@ it, please enter the types and the actual numbers or codes below.</hint>
          <dc-schema>dc</dc-schema>
          <dc-element>language</dc-element>
          <dc-qualifier>iso</dc-qualifier>
-         <repeatable>false</repeatable>
+         <repeatable>true</repeatable>
          <label>Language</label>
          <input-type value-pairs-name="common_iso_languages">dropdown</input-type>
          <hint>Select the language of the main content of the manuscript.  If the language does not appear in the list below, please select 'Other'.  If the content does not really have a language (for example, if it is a dataset or an image) please select 'N/A'. </hint>
          <required></required>
        </field>
 	</row>
-   
-
-        </form>
-         <!-- end manuscriptFistSection -->
-
-      <!--  manuscriptPageTwo -->
- <form name="manuscriptPageTwo">
 
 
-             <row>
+                 <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>subject</dc-element>
@@ -9313,6 +9395,16 @@ it, please enter the types and the actual numbers or codes below.</hint>
                     <required></required>
                 </field>
 	</row>
+   
+
+        </form>
+         <!-- end manuscriptFistSection -->
+
+      <!--  manuscriptPageTwo -->
+ <form name="manuscriptPageTwo">
+
+
+
 
  <row>
 	<field>
@@ -10779,6 +10871,11 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
     
         <value-pairs value-pairs-name="common_identifiers" dc-term="identifier">
+
+            <pair>
+                <displayed-value>DOI</displayed-value>
+                <stored-value>doi</stored-value>
+            </pair>
             <pair>
                 <displayed-value>ISSN</displayed-value>
                 <stored-value>issn</stored-value>
@@ -10787,10 +10884,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <displayed-value>Save Number</displayed-value>
                 <stored-value>saveNumber</stored-value>
             </pair>
-            <pair>
-                <displayed-value>Other</displayed-value>
-                <stored-value>other</stored-value>
-            </pair>
+         
             <pair>
                 <displayed-value>ISMN</displayed-value>
                 <stored-value>ismn</stored-value>
@@ -10803,18 +10897,20 @@ it, please enter the types and the actual numbers or codes below.</hint>
                 <displayed-value>URI</displayed-value>
                 <stored-value>uri</stored-value>
             </pair>
-              <pair>
-                <displayed-value>DOI</displayed-value>
-                <stored-value>doi</stored-value>
-            </pair>
+          
             <pair>
                 <displayed-value>ISBN</displayed-value>
                 <stored-value>isbn</stored-value>
             </pair>
 
-             <pair>
+             <!-- <pair>
                 <displayed-value>DDC</displayed-value>
                 <stored-value>ddc</stored-value>
+            </pair> -->
+
+               <pair>
+                <displayed-value>Other</displayed-value>
+                <stored-value>other</stored-value>
             </pair>
         </value-pairs>
 

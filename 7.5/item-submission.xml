@@ -585,7 +585,7 @@
         
 
         <step-definition id="manuscriptFistSection" mandatory="true">
-            <heading>submit.progressbar.manuscriptAuthorDescribe.stepone</heading>
+            <heading>submit.progressbar.describe.stepone</heading>
             <processing-class>org.dspace.app.rest.submit.step.DescribeStep</processing-class>
             <type>submission-form</type>
         </step-definition>
@@ -891,7 +891,7 @@
             <step id="cclicense"/>
 
             <!--Step will be to Sign off on the required DSpace License agreement -->
-            <step id="license"/>
+            <!-- <step id="license"/> -->
         </submission-process>
 
         <!--
