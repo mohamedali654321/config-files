@@ -3865,7 +3865,7 @@ known.</hint>
 
 
 
- <row>
+ <!-- <row>
                 <field>
                      <dc-schema>organization</dc-schema>
                       <dc-element>role</dc-element>
@@ -3884,6 +3884,17 @@ known.</hint>
                     <label>Description role</label>
                     <input-type>textarea</input-type>
                     <hint>Enter the job title description of the administration</hint>
+                </field>
+            </row> -->
+
+            <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>Country</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the country of the administration</hint>
                 </field>
             </row>
 
@@ -3911,16 +3922,6 @@ known.</hint>
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>Country</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the country of the administration</hint>
-                </field>
-            </row>
 
           <row>
                 <field>
@@ -3963,7 +3964,7 @@ known.</hint>
 
                       <row>
                 <field>
-                    <dc-schema>dc</dc-schema>
+                    <dc-schema>organization</dc-schema>
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>ror</dc-qualifier>
                     <label>Research Organization Registry(ROR)</label>
@@ -4239,20 +4240,20 @@ known.</hint>
             </row> -->
 
 
-
-                               <row>
+            
+            <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>Address of the organization</label>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>Country</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the address of the organization</hint>
+                    <hint>Enter the country of the orgunit</hint>
                 </field>
             </row>
 
 
-                        <row>
+                             <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
@@ -4266,16 +4267,22 @@ known.</hint>
 
 
 
-            <row>
+                               <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>Country</label>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Address of the organization</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the country of the orgunit</hint>
+                    <hint>Enter the address of the organization</hint>
                 </field>
             </row>
+
+
+       
+
+
+
 
           <row>
                 <field>
@@ -4318,7 +4325,7 @@ known.</hint>
 
                       <row>
                 <field>
-                    <dc-schema>dc</dc-schema>
+                    <dc-schema>organization</dc-schema>
                     <dc-element>identifier</dc-element>
                     <dc-qualifier>ror</dc-qualifier>
                     <label>Research Organization Registry(ROR)</label>
@@ -8500,6 +8507,7 @@ known.</hint>
                     <input-type>tag</input-type>
                     <hint>Enter keywords or phrases appropriate to the subject.</hint>
                     <required></required>
+                    
                 </field>
 	</row>
 
@@ -9161,14 +9169,14 @@ known.</hint>
 
                        <row>
                 <relation-field>
-                    <relationship-type>isOrgUnitOfPublication</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfPublication</relationship-type>
+                    <search-configuration>administration</search-configuration>
                     <repeatable>true</repeatable>
                    <label>The name of the library the manuscript belongs to</label>
                     <hint>Import It belongs to a library or enter the name of It belongs to a library</hint>
                        <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
-                        <dc-element>legalName</dc-element>
+                        <dc-element>childLegalName</dc-element>
                         <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
@@ -9419,7 +9427,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
        </field>
 	</row>
 
-       <row>
+       <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>source</dc-element>
@@ -9430,7 +9438,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                     <hint>Enter the source of maunscript.</hint>
                     <required></required>
                 </field>
-            </row>
+            </row> -->
 
    <row>
 	<field>
@@ -9857,7 +9865,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
 
 
 
-	<row>
+	<!-- <row>
                 <relation-field>
                  <relationship-type>isOrgUnitOfPublication</relationship-type>
                     <search-configuration>orgunit</search-configuration>
@@ -9870,8 +9878,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                        <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
-                    <!--<externalsources>pubmed</externalsources>-->
-                </relation-field>
+                                    </relation-field>
 	</row>
 
 
@@ -9890,7 +9897,7 @@ it, please enter the types and the actual numbers or codes below.</hint>
                     </linked-metadata-field>
                     
                 </relation-field>
-	</row>
+	</row> -->
 
 
 	<row>

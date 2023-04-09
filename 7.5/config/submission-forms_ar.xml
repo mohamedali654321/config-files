@@ -2372,7 +2372,7 @@
                     <repeatable>true</repeatable>
                     <label>المسمي الوظيفي</label>
                     <input-type value-pairs-name="roles_names">dropdown</input-type>
-                    <hint>حدد  الدور للشخص</hint>
+                    <hint>حدد  المسمي الوظيفي للشخص</hint>
                 </field>
             </row>
 
@@ -2381,9 +2381,9 @@
                     <dc-schema>person</dc-schema>
                     <dc-element>jobTitle</dc-element>
                     <dc-qualifier>description</dc-qualifier>
-                    <label>وصف الدور</label>
+                    <label>وصف المسمي الظيفي</label>
                     <input-type>textarea</input-type>
-                    <hint>أدخل  وصف الدور للشخص</hint>
+                    <hint>أدخل  وصف المسمي الوظيفي للشخص</hint>
                 </field>
             </row>
 
@@ -6988,7 +6988,7 @@
                 </field>
             </row>
 
-<row>
+<!-- <row>
     <field>
         <dc-schema>organization</dc-schema>
         <dc-element>role</dc-element>
@@ -7007,8 +7007,19 @@
         <input-type>textarea</input-type>
         <hint>أدخل  وصف الدور للإدارة</hint>
     </field>
-</row>
+</row> -->
             
+                     <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>الدولة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل بلد الإدارة</hint>
+                </field>
+            </row>
+
             <row>
                 <field>
                     <dc-schema>organization</dc-schema>
@@ -7031,16 +7042,7 @@
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>الدولة</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل بلد الإدارة</hint>
-                </field>
-            </row>
+   
 
             <row>
                 <field>
@@ -7360,6 +7362,29 @@
     </field>
 </row>
              -->
+
+                    <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>الدولة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل بلد المؤسسة</hint>
+                </field>
+            </row>
+
+
+              <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressLocality</dc-qualifier>
+                    <label>المدينة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل مدينة المؤسسة</hint>
+                </field>
+            </row>
      
 
                       <row>
@@ -7373,27 +7398,9 @@
                 </field>
             </row>
 
-                   <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressLocality</dc-qualifier>
-                    <label>المدينة</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل مدينة المؤسسة</hint>
-                </field>
-            </row>
+                 
 
-            <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>الدولة</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل بلد المؤسسة</hint>
-                </field>
-            </row>
+     
 
             <row>
                 <field>
@@ -8298,7 +8305,7 @@
                     <input-type>tag</input-type>
                   <hint>أدخل الكلمات الرئيسية لعدد الدورية</hint>
                     <required></required>
-                    <vocabulary>srsc</vocabulary>
+                    <!-- <vocabulary>srsc</vocabulary> -->
                 </field>
 	</row>
 
@@ -8958,16 +8965,16 @@
 	</row>
 
 
-                       <row>
+             <row>
                 <relation-field>
-                    <relationship-type>isOrgUnitOfPublication</relationship-type>
-                    <search-configuration>orgunit</search-configuration>
+                    <relationship-type>isAdministrationOfPublication</relationship-type>
+                    <search-configuration>administration</search-configuration>
                     <repeatable>true</repeatable>
                     <label>اسم المكتبة التابعة لها المخطوطة</label>
                     <hint>استيراد المكتبة التابعة له أو إدخال اسم المكتبة التابعة له</hint>
                        <linked-metadata-field>
                         <dc-schema>organization</dc-schema>
-                        <dc-element>legalName</dc-element>
+                        <dc-element>childLegalName</dc-element>
                         <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
@@ -8977,7 +8984,7 @@
 
 
 
-                       <row>
+            <row>
                 <relation-field>
                     <relationship-type>isOrgUnitOfPublication</relationship-type>
                     <search-configuration>orgunit</search-configuration>
@@ -9214,7 +9221,7 @@
        </field>
 	</row>
 
-       <row>
+       <!-- <row>
                 <field>
                     <dc-schema>dc</dc-schema>
                     <dc-element>source</dc-element>
@@ -9225,7 +9232,7 @@
                     <hint>أدخل مصدر المخطوطة.</hint>
                     <required></required>
                 </field>
-            </row>
+            </row> -->
 
 
 
@@ -9677,7 +9684,7 @@
 
 
 
-	<row>
+	<!-- <row>
                 <relation-field>
                  <relationship-type>isOrgUnitOfPublication</relationship-type>
                     <search-configuration>orgunit</search-configuration>
@@ -9690,12 +9697,11 @@
                        <dc-qualifier></dc-qualifier>
                         <input-type>onebox</input-type>
                     </linked-metadata-field>
-                    <!--<externalsources>pubmed</externalsources>-->
                 </relation-field>
-	</row>
+	</row> -->
 
 
-    <row>
+    <!-- <row>
                 <relation-field>
                  <relationship-type>isAdministrationOfPublication</relationship-type>
                     <search-configuration>administration</search-configuration>
@@ -9710,7 +9716,7 @@
                     </linked-metadata-field>
                     
                 </relation-field>
-	</row>
+	</row> -->
 
 
 	<row>
