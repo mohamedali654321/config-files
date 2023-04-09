@@ -387,8 +387,8 @@
                     <relationship-type>isAdministrationOfPublication</relationship-type>
                     <search-configuration>administration</search-configuration>
                      <repeatable>false</repeatable>
-                    <label> اسم القسم</label>
-                    <hint> أدخل اسم القسم الخاص بالأطروحة الجامعية، إن وجد</hint>
+                    <label> القسم</label>
+                    <hint> أدخل  القسم الخاص بالأطروحة الجامعية، إن وجد</hint>
                     <linked-metadata-field>
                        <dc-schema>organization</dc-schema>
                          <dc-element>childLegalName</dc-element>
@@ -5276,6 +5276,18 @@
             </row>
 
 
+
+                    <row>
+                <field>
+                    <dc-schema>place</dc-schema>
+                    <dc-element>address</dc-element>
+                    <label>العنوان</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل عنوان المكان</hint>
+                </field>
+            </row>
+
+
          <row>
                 <field>
                     <dc-schema>place</dc-schema>
@@ -5297,15 +5309,7 @@
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>place</dc-schema>
-                    <dc-element>address</dc-element>
-                    <label>العنوان</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل عنوان المكان</hint>
-                </field>
-            </row>
+    
 
             <row>
                 <field>
@@ -5656,6 +5660,17 @@
             </row>
 
 
+                   <row>
+                <field>
+                    <dc-schema>place</dc-schema>
+                    <dc-element>address</dc-element>
+                    <label>العنوان</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل عنوان الموقع</hint>
+                </field>
+            </row>
+
+
          <row>
                 <field>
                     <dc-schema>place</dc-schema>
@@ -5677,15 +5692,7 @@
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>place</dc-schema>
-                    <dc-element>address</dc-element>
-                    <label>العنوان</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل عنوان الموقع</hint>
-                </field>
-            </row>
+     
 
             <row>
                 <field>
@@ -7009,14 +7016,17 @@
     </field>
 </row> -->
             
-                     <row>
+          
+
+
+                      <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>الدولة</label>
+                    <dc-qualifier></dc-qualifier>
+                    <label>العنوان</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل بلد الإدارة</hint>
+                    <hint>أدخل عنوان الإدارة</hint>
                 </field>
             </row>
 
@@ -7031,14 +7041,15 @@
                 </field>
             </row>
 
-                      <row>
+
+                       <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>العنوان</label>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>الدولة</label>
                     <input-type>onebox</input-type>
-                    <hint>أدخل عنوان الإدارة</hint>
+                    <hint>أدخل بلد الإدارة</hint>
                 </field>
             </row>
 
@@ -7363,28 +7374,9 @@
 </row>
              -->
 
-                    <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>الدولة</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل بلد المؤسسة</hint>
-                </field>
-            </row>
 
 
-              <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier>addressLocality</dc-qualifier>
-                    <label>المدينة</label>
-                    <input-type>onebox</input-type>
-                    <hint>أدخل مدينة المؤسسة</hint>
-                </field>
-            </row>
+         
      
 
                       <row>
@@ -7398,7 +7390,30 @@
                 </field>
             </row>
 
+
+     <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressLocality</dc-qualifier>
+                    <label>المدينة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل مدينة المؤسسة</hint>
+                </field>
+            </row>
                  
+
+                 
+                    <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>الدولة</label>
+                    <input-type>onebox</input-type>
+                    <hint>أدخل بلد المؤسسة</hint>
+                </field>
+            </row>
 
      
 

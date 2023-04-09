@@ -3887,16 +3887,18 @@ known.</hint>
                 </field>
             </row> -->
 
-            <row>
+                          <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>Country</label>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Address</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the country of the administration</hint>
+                    <hint>Enter the address of the administration</hint>
                 </field>
             </row>
+
+
 
 
                         <row>
@@ -3911,14 +3913,14 @@ known.</hint>
             </row>
 
 
-                   <row>
+                 <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>Address</label>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>Country</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the address of the administration</hint>
+                    <hint>Enter the country of the administration</hint>
                 </field>
             </row>
 
@@ -4240,19 +4242,21 @@ known.</hint>
             </row> -->
 
 
-            
-            <row>
+
+
+                               <row>
                 <field>
                     <dc-schema>organization</dc-schema>
                     <dc-element>address</dc-element>
-                    <dc-qualifier>addressCountry</dc-qualifier>
-                    <label>Country</label>
+                    <dc-qualifier></dc-qualifier>
+                    <label>Address of the organization</label>
                     <input-type>onebox</input-type>
-                    <hint>Enter the country of the orgunit</hint>
+                    <hint>Enter the address of the organization</hint>
                 </field>
             </row>
 
-
+            
+      
                              <row>
                 <field>
                     <dc-schema>organization</dc-schema>
@@ -4267,19 +4271,20 @@ known.</hint>
 
 
 
-                               <row>
-                <field>
-                    <dc-schema>organization</dc-schema>
-                    <dc-element>address</dc-element>
-                    <dc-qualifier></dc-qualifier>
-                    <label>Address of the organization</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the address of the organization</hint>
-                </field>
-            </row>
 
 
        
+      <row>
+                <field>
+                    <dc-schema>organization</dc-schema>
+                    <dc-element>address</dc-element>
+                    <dc-qualifier>addressCountry</dc-qualifier>
+                    <label>Country</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the country of the orgunit</hint>
+                </field>
+            </row>
+
 
 
 
@@ -6627,6 +6632,17 @@ known.</hint>
                         <row>
                 <field>
                     <dc-schema>place</dc-schema>
+                    <dc-element>address</dc-element>
+                    <label>Address</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the address of place</hint>
+                </field>
+            </row>
+
+
+                        <row>
+                <field>
+                    <dc-schema>place</dc-schema>
                     <dc-element>city</dc-element>
                     <dc-qualifier></dc-qualifier>
                     <label>City</label>
@@ -6645,15 +6661,6 @@ known.</hint>
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>place</dc-schema>
-                    <dc-element>address</dc-element>
-                    <label>Address</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the address of place</hint>
-                </field>
-            </row>
 
 
             <row>
@@ -7002,7 +7009,20 @@ known.</hint>
                     <input-type>onebox</input-type>
                     <hint>Enter place slogan</hint>
                 </field>
+
             </row>
+
+
+          <row>
+                <field>
+                    <dc-schema>place</dc-schema>
+                    <dc-element>address</dc-element>
+                    <label>Address</label>
+                    <input-type>onebox</input-type>
+                    <hint>Enter the address of place</hint>
+                </field>
+            </row>
+
 
                         <row>
                 <field>
@@ -7025,16 +7045,7 @@ known.</hint>
                 </field>
             </row>
 
-            <row>
-                <field>
-                    <dc-schema>place</dc-schema>
-                    <dc-element>address</dc-element>
-                    <label>Address</label>
-                    <input-type>onebox</input-type>
-                    <hint>Enter the address of place</hint>
-                </field>
-            </row>
-
+  
 
             <row>
                 <field>
