@@ -3975,8 +3975,8 @@
                     <relationship-type>isFunderOfActivity</relationship-type>
                     <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>مؤسس الحدث</label>
-                    <hint>أدخل اسم مؤسس الحدث  (الاسم الأخير ، الاسم الأول).</hint>
+                    <label>مؤسس الفعالية</label>
+                    <hint>أدخل اسم مؤسس الفعالية  (الاسم الأخير ، الاسم الأول).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
@@ -4816,7 +4816,7 @@
                     <relationship-type>isEventOfSeries</relationship-type>
                     <search-configuration>event</search-configuration>
                      <repeatable>true</repeatable>
-                    <label>Event</label>
+                    <label>الحدث</label>
                     <hint>Import an event or enter an event name</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>

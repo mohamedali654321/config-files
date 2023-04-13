@@ -5189,7 +5189,7 @@ known.</hint>
             	<row>
                 <relation-field>
                     <relationship-type>isFunderOfEvent</relationship-type>
-                    <search-configuration>person</search-configuration>
+                    <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
                     <label>Event Founder</label>
                    <hint>Enter the event founder's name (last name, first name).</hint>
@@ -5656,10 +5656,10 @@ known.</hint>
             	<row>
                 <relation-field>
                     <relationship-type>isFunderOfActivity</relationship-type>
-                    <search-configuration>person</search-configuration>
+                    <search-configuration>personOrOrgunit</search-configuration>
                     <repeatable>true</repeatable>
-                    <label>Event Founder</label>
-                   <hint>Enter the event founder's name (last name, first name).</hint>
+                    <label>Activity Founder</label>
+                   <hint>Enter the activity founder's name (last name, first name).</hint>
                     <linked-metadata-field>
                         <dc-schema>event</dc-schema>
                         <dc-element>funder</dc-element>
